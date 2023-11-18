@@ -7,12 +7,12 @@ import { CardsComponent } from './pages/cards/cards.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path:"", component: HomeComponent},
+  { path:"home", component: HomeComponent},
   { path:"login", component: LoginComponent},
   { path:"register", component: RegisterComponent},
   { path:"cards", component: CardsComponent},
   { path:"portfolio", component: PortfolioComponent},
-  { path:"**", redirectTo:""}
+  { path:"", redirectTo:"home", pathMatch: "full"}
 ]
 
 

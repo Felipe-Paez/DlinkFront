@@ -27,6 +27,7 @@ import { CardComponent } from './component/card/card.component';
 import { FilterComponent } from './component/filter/filter.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsHeaderComponent } from './pages/home/products-header/products-header.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     CardComponent,
     FilterComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsHeaderComponent
   ],
   imports: [
     BrowserModule,

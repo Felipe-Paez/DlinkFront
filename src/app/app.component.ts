@@ -2,10 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<app-header><app-header>'
-  // templateUrl: './app.component.html',
-  // styleUrls: ['./app.component.css']
+  template:
+`<app-header></app-header>
+  <router-outlet></router-outlet>`,
+  
+  styleUrls: ['./app.component.css'],
+  
 })
 export class AppComponent {
   title = 'dlinkproject';
 }
+// templateUrl: './app.component.html',
