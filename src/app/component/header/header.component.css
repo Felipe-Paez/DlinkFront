@@ -1,4 +1,4 @@
 .mat-toolbar-row, .mat-toolbar-single-row {
- 
+    background-color: #424C58;
     justify-content: space-between;
 }

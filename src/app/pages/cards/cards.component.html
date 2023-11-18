@@ -1,5 +1,13 @@
-<div class="content">
-    <main>
+<mat-drawer-container 
+[autosize]="true"
+class="min-h-full max-w-7x1 mx-auto border-x">
+
+    <mat-drawer mode="side" opened>
+            <div>Filters</div>
+    </mat-drawer >
+    <mat-drawer-content class="p-6" style="background-color: #a9a9a9">
+        <app-products-header></app-products-header>
+        <div class="content">
         <div class="card-box">
             <app-card></app-card>
             <app-card></app-card>
@@ -11,6 +19,8 @@
             <app-card></app-card>
             <app-card></app-card>
         </div>
-    </main>
-    <app-filter></app-filter>
 </div>
+    </mat-drawer-content>
+
+
+</mat-drawer-container>
