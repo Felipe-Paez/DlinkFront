@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-products-header',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./products-header.component.css']
 })
 export class ProductsHeaderComponent {
+  
   sort = "descending";
   itemsShowCount = 12
   constructor(){}
@@ -18,5 +19,9 @@ export class ProductsHeaderComponent {
   onItemsUpdated(count:number):void{
     this.itemsShowCount = count;
   }
+
+  
+
+
 
 }
