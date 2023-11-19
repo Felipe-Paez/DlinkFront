@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  category: string | undefined;
 
+  constructor(){}
+
+  ngOnInit(): void {
+
+  }
+  
+onShowCategory(newCategory: string): void {
+  this.category = newCategory;
+}
 }
