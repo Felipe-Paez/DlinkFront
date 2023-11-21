@@ -1,66 +1,122 @@
+<!-- Paso 4 (Reactive Forms): Obtener datos del formulario invocando el metodo onSumbit a traves del evento -> (ngSubmit)="onSubmit()" -->
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()"
+  class="form form-auth form-login"
+  autocomplete="off"
+>
+  <h2>Register</h2>
+  <div class="field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Ingrese su Nombre"
+    />
+    <!-- Despliega los mensajes de error del campo -->
+    <div 
+      *ngIf="registerForm.get( 'name' )?.invalid && registerForm.get( 'name' )?.dirty && registerForm.get( 'name' )?.touched" 
+      class="error-message"
+    >
+      <small 
+        *ngIf="registerForm.get( 'name' )?.errors?.[ 'required' ]"
+      >
+        El nombre del usuario es requerido
+      </small>
+      <small
+        *ngIf="registerForm.get( 'name' )?.errors?.[ 'minLength' ]"
+      >
+        Debe tener al menos 3 caracteres
+      </small>
 
+    </div>
+  </div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      class="input-field"
+      type="email"
+      formControlName="username"
+      placeholder="Ingrese su Email"
+    />
+      <!-- Despliega los mensajes de error del campo -->
+      <div 
+        *ngIf="registerForm.get( 'username' )?.invalid && registerForm.get( 'username' )?.dirty && registerForm.get( 'username' )?.touched" 
+        class="error-message"
+      >
+        <small
+          *ngIf="registerForm.get( 'username' )?.errors?.[ 'required' ]"
+        >
+          Username is required
+        </small>
+        <small *ngIf="registerForm.get( 'username' )?.errors?.[ 'email' ]">
+          Username is an email
+        </small>
+      </div>
 
-    <main>
-        <div class="rg-box">
-            <div class="rg-button"><button class="acordeon">Regístrate como Cliente</button>
-                <section class="panel">
-                    <div class="contact" id="#contact">
-                        <div class="contact-form">
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      class="input-field"
+      type="password"
+      formControlName="password"
+      placeholder="Ingrese su Password"
+    />
+      <!-- Despliega los mensajes de error del campo -->
+      <div 
+        *ngIf="registerForm.get( 'password' )?.invalid && registerForm.get( 'password' )?.dirty && registerForm.get( 'password' )?.touched" 
+        class="error-message"
+      >
+        <small
+          *ngIf="registerForm.get( 'password' )?.errors?.[ 'required' ]"
+        >
+          Password required
+        </small>
+        <small
+          *ngIf="registerForm.get( 'password' )?.errors?.[ 'minLength' ]"
+        >
+          At least 6 characters
+        </small>
+        <small
+          *ngIf="registerForm.get( 'password' )?.errors?.[ 'maxLength' ]"
+        >
+          Need to have up to 12 charaters
+        </small>
 
-                            <div class="form-text"><label for="name">Nombre:</label><input type="text" id="name"></div>
-                            <div class="form-text"><label for="email">Email:</label><input type="text" id="email"></div>
-                            <div class="form-text"><label for="phone">Celular:</label><input type="text" id="phone">
-                            </div>
-                            <div class="form-text-select"><label class="select" for="select">Contactame por
-                                    via:</label><select name="" id="select">
-                                    <option value="Email">Email</option>
-                                    <option value="Celular">Celular</option>
-                                </select></div>
+      </div>
 
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="rg-button"><button class="acordeon">Regístrate como Diseñador</button>
-                <section class="panel">
-                    <div class="contact" id="#contact">
-                        <div class="contact-form">
+  </div>
 
-                            <div class="form-text"><label for="name">Nombre:</label><input type="text" id="name"></div>
-                            <div class="form-text"><label for="email">Email:</label><input type="text" id="email"></div>
-                            <div class="form-text"><label for="phone">Celular:</label><input type="text" id="phone">
-                            </div>
-                            <div class="form-text-select"><label class="select" for="select">Contactame por
-                                    via:</label><select name="" id="select">
-                                    <option value="Email">Email</option>
-                                    <option value="Celular">Celular</option>
-                                </select></div>
+ <!-- Imprime mensaje -->
+ <div class="field">
+    <div [class]="classMessage">
+      {{ message }}
+    </div>
+  </div>
+  
+  <div class="field">
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="registerForm.invalid"
+    >Register</button>
+  </div>
+  <div class="field footer-form">
+    <p>¿Do you have an account already?</p>
+    <p> Sing in <a routerLink="/auth/login">Here</a></p>
+  </div>
 
-                        </div>
-                    </div>
-
-                </section>
-            </div>
-            <div class="rg-button"> <button class="acordeon">Regístrate como Empresa</button>
-                <section class="panel">
-                    <div class="contact" id="#contact">
-                        <div class="contact-form">
-
-                            <div class="form-text"><label for="name">Nombre:</label><input type="text" id="name"></div>
-                            <div class="form-text"><label for="email">Email:</label><input type="text" id="email"></div>
-                            <div class="form-text"><label for="phone">Celular:</label><input type="text" id="phone">
-                            </div>
-                            <div class="form-text-select"><label class="select" for="select">Contactame por
-                                    via:</label><select name="" id="select">
-                                    <option value="Email">Email</option>
-                                    <option value="Celular">Celular</option>
-                                </select></div>
-
-                        </div>
-                    </div>
-
-                </section>
-            </div>
-        </div>
+  <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <pre class="error"> Name {{ registerForm.get( 'name' )?.errors | json }}</pre>
+    <pre class="error"> Username {{ registerForm.get( 'username' )?.errors | json }}</pre>
+    <pre class="error"> Password {{ registerForm.get( 'password' )?.errors | json }}</pre>
+  </div>
+</form>
 
 

@@ -29,6 +29,7 @@ import { FilterComponent } from './pages/home/filter/filter.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsHeaderComponent } from './pages/home/products-header/products-header.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ProductsHeaderComponent } from './pages/home/products-header/products-h
     MatTableModule,
     MatBadgeModule, 
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
