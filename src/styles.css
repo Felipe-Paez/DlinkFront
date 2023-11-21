@@ -265,6 +265,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
  
 }
 
+
 .form-auth .field,
 .form-product .field {
   display: flex;
@@ -286,6 +287,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .field.footer-form {
   text-align: center;
+}
+
+.field.footer-form-2 {
+    text-align: center;
+  }
+.here {
+    color: blue
 }
 
 .form .errors {
