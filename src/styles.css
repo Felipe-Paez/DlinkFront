@@ -262,8 +262,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   justify-content: center;
   align-items: center;
   margin: 60px auto;
-  background-color: #222222;
-  color: white;
+ 
 }
 
 .form-auth .field,
