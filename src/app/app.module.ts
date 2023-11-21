@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -24,10 +25,11 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HeaderComponent } from './component/header/header.component';
 import { CardComponent } from './component/card/card.component';
-import { FilterComponent } from './component/filter/filter.component';
+import { FilterComponent } from './pages/home/filter/filter.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsHeaderComponent } from './pages/home/products-header/products-header.component';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,7 @@ import { ProductsHeaderComponent } from './pages/home/products-header/products-h
     MatTableModule,
     MatBadgeModule, 
     MatSnackBarModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

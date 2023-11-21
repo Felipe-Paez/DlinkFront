@@ -1,16 +1,12 @@
-<mat-toolbar class="max-w-7x1 mx-auto justify-between" color="primary">
+<mat-toolbar  style="--mat-toolbar-title-text-line-height: 100px;" class="max-w-7x1 mx-auto justify-between" color="primary">
 
     <h1>D'link</h1>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>account_circle</mat-icon>
-    </button>
+        <mat-icon  mat-icon-button [matMenuTriggerFor]="menu" >account_circle</mat-icon>
+
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-            <a routerLink="register">Register</a>
-        </button>
-        <button mat-menu-item>
-            <a routerLink="login">Login</a>
-        </button>
+        <a mat-menu-item routerLink="/register">Register</a>
+        <a mat-menu-item routerLink="/login">Login</a>
+    
 
 
     </mat-menu>

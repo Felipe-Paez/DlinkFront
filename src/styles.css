@@ -32,16 +32,6 @@ header {
 }
 
 
-.header__section {
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 a {
     text-decoration: none;
@@ -70,10 +60,6 @@ a {
     z-index: 3;
 }
 
-.banner-left {
-    display: flex;
-    margin-left: 15px;
-}
 
 .menu-icon {
     border-radius: 100%;
@@ -89,31 +75,15 @@ a {
     font-size: 4.6rem;
 }
 
-.profile {
-    font-family: icon;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 15px;
-    font-size: 4rem;
-    padding-bottom: 15px;
-}
 
 
 
-
-.card-box{
-    margin: 30px 0 0 0;
-    display: flex;
-    max-width: 1600px;
-    position: relative;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
 
 .flip {
+    background: none!important;
+    border: none!important;
+    box-shadow: none!important;
     box-sizing: border-box;
     text-align: center;
     position: relative;
@@ -169,7 +139,7 @@ a {
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: 315px;
+    width: 370.2px;
     >.front,
     >.back {
       display: block;
@@ -180,7 +150,7 @@ a {
       height: 220px;
       padding: 1rem 2rem;
       background: #313131;
-      border-radius: 2px;
+      border-radius: 10px;
       p {
         font-size: 0.9125rem;
         line-height: 160%;
@@ -188,7 +158,6 @@ a {
       }
     }
 }
-
 footer#footer {
     height: 3.5rem;
     background-color: #c1e1c1;
@@ -196,73 +165,9 @@ footer#footer {
 
 .content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-direction: ro;
 }
-
-#filter {
-    color: #dfbd69;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 315px;
-    align-items: center;
-    margin: 30px 30px;
-    background-color: #424C58;
-    border-radius: 25px;
-    height: 30rem;
-}
-
-.primer_seccion {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-input.buscar_ciudad {
-    color: #dfbd69;
-    background-color: #313131;
-    margin: 20px;
-    height: 25px;
-    width: 12rem;
-}
-button.buscar-button {
-    color: #dfbd69;
-    background-color: #313131;
-    height: 30px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-.segunda_seccion {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0px;
-}
-
-label {
-    font-size: 15px;
-    margin: 0px 55px 0px 0px;
-}
-
-button.filtrar-precio {
-    color: #dfbd69;
-    background-color: #313131;
-    height: 30px;
-    width: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-
-
 
 @media (max-width: 390px) {
     .logo {

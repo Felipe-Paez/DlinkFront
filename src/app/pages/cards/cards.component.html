@@ -2,23 +2,14 @@
 [autosize]="true"
 class="min-h-full max-w-7x1 mx-auto border-x">
 
-    <mat-drawer mode="side" opened>
-            <div>Filters</div>
+    <mat-drawer mode="side" opened class="p-6">
+        <app-filter (showCategory)="onShowCategory($event)"></app-filter>
     </mat-drawer >
     <mat-drawer-content class="p-6" style="background-color: #a9a9a9">
         <app-products-header></app-products-header>
+        {{category}}
         <div class="content">
-        <div class="card-box">
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-        </div>
+            <app-card *ngFor="let product of products"  [product]="product"></app-card>
 </div>
     </mat-drawer-content>
 

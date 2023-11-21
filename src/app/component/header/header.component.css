@@ -1,12 +1,26 @@
 .mat-toolbar-row, .mat-toolbar-single-row {
-    height: 100px;
-    background-color: #424C58;
+    height: 86px;
+    background-color: #222222;
     justify-content: space-between;
+
+
 }
 
 h1{
-    font-family: space;
+    padding-top: 3px;
+    font-family: space!important;
     font-size: 3.6rem!important;
+    background-image: url("/assets/images/gold.jpg")!important;
+    background-clip: text!important;
+    color: transparent!important;
+    background-color: white!important;
+}
+
+.mat-icon{
+    padding-top: 1.5px;
+    height: 48px!important;
+    font-size: 3rem;
+    width: 48px!important;
     background-image: url("/assets/images/gold.jpg")!important;
     background-clip: text!important;
     color: transparent!important;

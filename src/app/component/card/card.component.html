@@ -1,13 +1,12 @@
-<mat-card style="background: none; border: none; box-shadow: none;" class="card-box">
-    <div class="flip">
-        <div class="front" style="background-image: url(/assets/images/card1.jpg);"></div>
+
+    <mat-card class="flip">
+        <div class="front" style="background-image: url({{product.urlImage}});"></div>
         <div class="back">
-            <h2>NICKNAME</h2>
+            <h2>{{product.name}}</h2>
             <p>Rating:</p>
-            <p>Estilo de diseño:</p>
+            <p>Estilo de diseño:{{product.description}}</p>
             <p>Rango de precios:</p>
             <button class="card-button">Ver Perfil</button>
 
         </div>
-    </div>
-</mat-card>
+    </mat-card>
