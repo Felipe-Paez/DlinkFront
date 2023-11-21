@@ -261,7 +261,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 60px auto;
+  background-color: #222222;
+  color: white;
 }
 
 .form-auth .field,
@@ -309,6 +311,8 @@ button.btn {
   width: 40%;
   margin: 0 auto;
   padding: 0.4rem;
+  background-color: gray;
+  color: black
 }
 
 .message {
