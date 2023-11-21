@@ -23,12 +23,12 @@
       <small 
         *ngIf="registerForm.get( 'name' )?.errors?.[ 'required' ]"
       >
-        El nombre del usuario es requerido
+        The user's name is required
       </small>
       <small
         *ngIf="registerForm.get( 'name' )?.errors?.[ 'minLength' ]"
       >
-        Debe tener al menos 3 caracteres
+        At least three characters
       </small>
 
     </div>
@@ -111,12 +111,12 @@
     <p> Sing in <a routerLink="/auth/login">Here</a></p>
   </div>
 
-  <div class="errors">
+  <!-- <div class="errors">
     <h3 class="title-errors">Errors</h3>
     <pre class="error"> Name {{ registerForm.get( 'name' )?.errors | json }}</pre>
     <pre class="error"> Username {{ registerForm.get( 'username' )?.errors | json }}</pre>
     <pre class="error"> Password {{ registerForm.get( 'password' )?.errors | json }}</pre>
   </div>
-</form>
+</form> -->
 
 
