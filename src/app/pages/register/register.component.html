@@ -5,7 +5,7 @@
   class="form form-auth form-login"
   autocomplete="off"
 >
-  <h2 style="color:pink">Register</h2>
+  <h2 class="regis">Register</h2>
   <div class="field">
     <label for="name">Name</label>
     <input
@@ -53,7 +53,7 @@
           Username is required
         </small>
         <small *ngIf="registerForm.get( 'username' )?.errors?.[ 'email' ]">
-          Username is an email
+          Invalid email
         </small>
       </div>
 
@@ -111,7 +111,7 @@
     <p>¿Do you have an account already?</p>
   </div>
   <div class="field footer-form-2">
-    <p> Sign in <a routerLink="../pages/login" class="here">Here</a></p>
+    <p> Sign in <a routerLink="/login" class="here">Here</a></p>
   </div>
 
   <!-- <div class="errors">
