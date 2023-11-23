@@ -1,8 +1,8 @@
 export interface User {
     _id?: string;
     name?: string;          // ? Opcional
+    lastname?:string;
     email: string;
     password: string;
-    number?:number;
     role?: string;           // ? Opcional
 }

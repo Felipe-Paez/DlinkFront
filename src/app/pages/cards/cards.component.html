@@ -1,11 +1,11 @@
 <mat-drawer-container 
 [autosize]="true"
-class="min-h-full max-w-7x1 mx-auto border-x">
+class="min-h-full max-w-7x1 mx-auto border-x" style="background-color: #a9a9a9;">
 
-    <mat-drawer mode="side" opened class="p-6">
+    <mat-drawer mode="side" opened class="p-6" style="background-color: #a9a9a9; border: none;">
         <app-filter (showCategory)="onShowCategory($event)"></app-filter>
     </mat-drawer >
-    <mat-drawer-content class="p-6" style="background-color: #a9a9a9">
+    <mat-drawer-content class="p-6" >
         <app-products-header></app-products-header>
         {{category}}
         <div class="content">

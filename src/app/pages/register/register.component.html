@@ -31,24 +31,24 @@
 
 
     <input
-      id="name"
+      id="lastname"
       class="input-field1"
       type="text"
-      formControlName="name"
+      formControlName="lastname"
       placeholder="Last Name"
     />
     <!-- Despliega los mensajes de error del campo -->
     <div 
-      *ngIf="registerForm.get( 'name' )?.invalid && registerForm.get( 'name' )?.dirty && registerForm.get( 'name' )?.touched" 
+      *ngIf="registerForm.get( 'lastname' )?.invalid && registerForm.get( 'lastname' )?.dirty && registerForm.get( 'lastname' )?.touched" 
       class="error-message"
     >
       <small 
-        *ngIf="registerForm.get( 'name' )?.errors?.[ 'required' ]"
+        *ngIf="registerForm.get( 'lastname' )?.errors?.[ 'required' ]"
       >
         Last Name is required
       </small>
       <small
-        *ngIf="registerForm.get( 'name' )?.errors?.[ 'minLength' ]"
+        *ngIf="registerForm.get( 'lastname' )?.errors?.[ 'minLength' ]"
       >
         At least three characters
       </small>
@@ -100,45 +100,6 @@
       type="password"
       formControlName="password"
       placeholder="Password"
-    
-    />
-      <!-- Despliega los mensajes de error del campo -->
-      <div 
-        *ngIf="registerForm.get( 'password' )?.invalid && registerForm.get( 'password' )?.dirty && registerForm.get( 'password' )?.touched" 
-        class="error-message"
-      >
-        <small
-          *ngIf="registerForm.get( 'password' )?.errors?.[ 'required' ]"
-        >
-          Password required
-        </small>
-        <small
-          *ngIf="registerForm.get( 'password' )?.errors?.[ 'minLength' ]"
-        >
-          At least 6 characters
-        </small>
-        <small
-          *ngIf="registerForm.get( 'password' )?.errors?.[ 'maxLength' ]"
-        >
-          Need to have up to 12 charaters
-        </small>
-
-      </div>
-
-  </div>
-
-
-
-
-
-  <div class="field">
-
-    <input
-      id="password"
-      class="input-field"
-      type="password"
-      formControlName="password"
-      placeholder="Verify Password"
     
     />
       <!-- Despliega los mensajes de error del campo -->

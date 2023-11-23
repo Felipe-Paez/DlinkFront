@@ -22,6 +22,13 @@ export class RegisterComponent {
         Validators.minLength( 3 ),
       ]    // Validaciones del campo
     ],
+    lastname: [ 
+      '',   // Valor por defecto del campo
+      [
+        Validators.required,
+        Validators.minLength( 3 ),
+      ]    // Validaciones del campo
+    ],
     email: [ 
       '',
       [
@@ -35,13 +42,6 @@ export class RegisterComponent {
         Validators.required,
         Validators.minLength( 6 ),
         Validators.maxLength( 12 )
-      ]
-    ],
-    number: [ 
-      '',
-      [ 
-        Validators.minLength( 10 ),
-        Validators.maxLength( 10 )
       ]
     ]
   });
