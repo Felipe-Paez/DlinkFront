@@ -1,1 +1,92 @@
-<p>login works!</p>
+<form
+  class="form form-auth form-login"
+  [formGroup]="loginForm"
+  (ngSubmit)="login()"
+  autocomplete="off"
+>
+  <h2>Login</h2>
+
+  <div class="field">
+
+    <input
+      id="email"
+      class="input-field"
+      type="email"
+      formControlName="username"
+      placeholder="Email or phone"
+    />
+
+    <div
+    *ngIf="loginForm.get( 'username' )?.invalid && ( loginForm.get( 'username' )?.dirty || loginForm.get( 'username' )?.touched )"
+    class="error-message">
+    <!--
+      loginForm.get( 'email' )?.invalid verifica si el campo de email es inválido.
+      loginForm.get( 'email' )?.dirty comprueba si el campo de email ha sido modificado.
+      loginForm.get( 'email' )?.touched verifica si el campo de email ha sido tocado.
+    -->
+
+    <small *ngIf="loginForm.get( 'username' )?.errors?.[ 'required' ]">
+      Username is required
+    </small>
+    <small *ngIf="loginForm.get( 'username' )?.errors?.[ 'pattern' ]">
+      Enter a valid username
+    </small>
+  </div>
+
+
+
+
+
+
+  </div>
+  <div class="field">
+    
+    <input
+      id="password"
+      class="input-field"
+      type="password"
+      formControlName="password"
+      placeholder="Password"
+    />
+    <div
+      *ngIf="loginForm.get( 'password' )?.invalid && ( loginForm.get( 'password' )?.dirty || loginForm.get( 'password' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="loginForm.get( 'password' )?.errors?.[ 'required' ]">
+        Password required
+      </small>
+      <small
+        *ngIf="loginForm.get( 'password' )?.errors?.[ 'pattern' ]"
+      >
+        Less than 8 characters
+        At least a number
+        At least a Capital letter
+        At least a special character
+
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="this.loginForm.invalid"
+    >Sign in</button>
+  </div>
+  <div class="field">
+      <!-- Imprime mensaje -->
+      <div [class]="classMessage">
+        {{ message }}
+      </div>
+    </div>
+  <div class="field footer-form">
+    <p>¿Don't you have an accout?</p>
+    <p>Sign up <a routerLink="/auth/register">Here</a></p>
+  </div>
+
+  <!-- <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <pre class="error">{{ loginForm.get( 'username' )?.errors | json }}</pre>
+    <pre class="error">{{ loginForm.get( 'password' )?.errors | json }}</pre>
+  </div>
+</form> -->

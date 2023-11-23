@@ -18,7 +18,6 @@ import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
@@ -30,6 +29,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsHeaderComponent } from './pages/home/products-header/products-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
