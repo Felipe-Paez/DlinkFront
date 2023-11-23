@@ -34,25 +34,48 @@
     </div>
   </div>
   <div class="field">
+    <label for="number">Phone number</label>
+    <input
+      id="number"
+      class="input-field"
+      type="number"
+      formControlName="number"
+      placeholder="Enter your phone number"
+    />
+      <!-- Despliega los mensajes de error del campo -->
+      <div 
+        *ngIf="registerForm.get( 'number' )?.invalid && registerForm.get( 'number' )?.dirty && registerForm.get( 'number' )?.touched" 
+        class="error-message"
+      >
+        <small *ngIf="registerForm.get( 'number' )?.errors?.[ 'minLength' ]">
+          Invalid number
+        </small>
+        <small *ngIf="registerForm.get( 'number' )?.errors?.[ 'maxLength' ]">
+          Invalid number
+        </small>
+      </div>
+
+  </div>
+  <div class="field">
     <label for="email">Email</label>
     <input
       id="email"
       class="input-field"
       type="email"
-      formControlName="username"
+      formControlName="email"
       placeholder="Enter your email"
     />
       <!-- Despliega los mensajes de error del campo -->
       <div 
-        *ngIf="registerForm.get( 'username' )?.invalid && registerForm.get( 'username' )?.dirty && registerForm.get( 'username' )?.touched" 
+        *ngIf="registerForm.get( 'email' )?.invalid && registerForm.get( 'email' )?.dirty && registerForm.get( 'email' )?.touched" 
         class="error-message"
       >
         <small
-          *ngIf="registerForm.get( 'username' )?.errors?.[ 'required' ]"
+          *ngIf="registerForm.get( 'email' )?.errors?.[ 'required' ]"
         >
-          Username is required
+          Email is required
         </small>
-        <small *ngIf="registerForm.get( 'username' )?.errors?.[ 'email' ]">
+        <small *ngIf="registerForm.get( 'email' )?.errors?.[ 'email' ]">
           Invalid email
         </small>
       </div>

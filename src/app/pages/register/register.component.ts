@@ -21,7 +21,7 @@ export class RegisterComponent {
         Validators.minLength( 3 ),
       ]    // Validaciones del campo
     ],
-    username: [ 
+    email: [ 
       '',
       [
         Validators.required,
@@ -34,6 +34,13 @@ export class RegisterComponent {
         Validators.required,
         Validators.minLength( 6 ),
         Validators.maxLength( 12 )
+      ]
+    ],
+    number: [ 
+      '',
+      [ 
+        Validators.minLength( 10 ),
+        Validators.maxLength( 10 )
       ]
     ]
   });
