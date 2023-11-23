@@ -1,7 +1,8 @@
 .regis{
     margin-top: 20px;
-    background-image: url("/assets/images/gold.jpg")!important;
-    background-clip: text!important;
-    color: transparent!important;
-    background-color: white!important;
+    /* color:transparent; */
+    background-image: url("/src/assets/images/gold.jpg")!important;
+    background-size: cover;
+    background-clip: text;
+
 }

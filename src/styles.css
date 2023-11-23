@@ -23,13 +23,7 @@ body {
     background-image: url(assets/images/goldBG.jpg)
 }
 
-header {
-    color: #dfbd69;
-    background-color: #424C58;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-}
+
 
 
 
@@ -364,4 +358,26 @@ button.btn {
   border: 1px solid green;
   color: green;
   background-color: limegreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #222222;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
