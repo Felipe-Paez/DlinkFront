@@ -13,6 +13,7 @@ h1{
     background-image: url("/assets/images/gold.jpg")!important;
     background-clip: text!important;
     color: transparent!important;
+    background-image:url("/")!important;
     background-color: white!important;
 }
 
