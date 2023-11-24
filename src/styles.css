@@ -375,9 +375,24 @@ button.btn {
 
 
 
-footer {
+.foot {
+    display: flex;
+    justify-content: center;
     background-color: #222222;
     position: fixed;
-    bottom: 0px;
-    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width:100%;
+}
+
+
+
+.footerText {
+    margin: 12px 0 12px!important;
+    background-image: url("/assets/images/gold.jpg")!important;
+    background-clip: text!important;
+    color: transparent!important;
+    background-color: white!important;
+    
 }
