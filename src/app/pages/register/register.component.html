@@ -8,8 +8,7 @@
   <h2 class="regis">Register</h2>
 
 
-  <div class="field1">
-    <input
+  <div class="field1"><div class="fname"><input
       id="name"
       class="input-field1"
       type="text"
@@ -27,10 +26,8 @@
         First Name is required
       </small>
 
-    </div>
-
-
-    <input
+    </div></div>
+   <div class="fname"><input
       id="lastname"
       class="input-field1"
       type="text"
@@ -54,7 +51,10 @@
       </small>
 
     </div>
+</div>
 
+
+    
 
 
   </div>
@@ -105,7 +105,7 @@
       <!-- Despliega los mensajes de error del campo -->
       <div 
         *ngIf="registerForm.get( 'password' )?.invalid && registerForm.get( 'password' )?.dirty && registerForm.get( 'password' )?.touched" 
-        class="error-message"
+        class="error-message-p" 
       >
         <small
           *ngIf="registerForm.get( 'password' )?.errors?.[ 'required' ]"
@@ -113,15 +113,20 @@
           Password required
         </small>
         <small
-          *ngIf="registerForm.get( 'password' )?.errors?.[ 'minLength' ]"
-        >
-          At least 6 characters
-        </small>
-        <small
-          *ngIf="registerForm.get( 'password' )?.errors?.[ 'maxLength' ]"
-        >
-          Need to have up to 12 charaters
-        </small>
+        *ngIf="registerForm.get( 'password' )?.errors?.[ 'pattern' ]"
+      >
+      <ul style="list-style: none; padding: inherit; margin-left: 7px;">
+        <li>Less than 8 characters</li>
+        <li>At least a number</li>
+        <li>At least a Capital letter</li>
+        <li>At least a special character</li>
+      </ul>
+        
+        
+        
+        
+
+      </small>
 
       </div>
 

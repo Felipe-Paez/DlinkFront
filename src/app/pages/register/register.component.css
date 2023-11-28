@@ -6,3 +6,22 @@
     background-color: white!important;
 
 }
+
+.fname{
+    display: flex;
+    flex-direction:column;
+}
+
+.input-field1{
+    width: 270px;
+}
+
+.error-message{
+    margin-left: 5px;
+}
+
+.error-message-p{
+    color: red;
+  font-style: italic;
+  font-size: 1.1rem;
+}

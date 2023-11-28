@@ -14,7 +14,7 @@ export class LoginComponent {
 
   loginForm: FormGroup = this.formBuilder.group({
     username: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.email ) ] ],
-    password: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.pass ), Validators.minLength( 6 ) ] ]
+    password: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.pass ) ] ]
   });
 
   constructor(

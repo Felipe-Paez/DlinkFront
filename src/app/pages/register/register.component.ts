@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from 'src/app/services/auth.service';
+import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 
 @Component({
   selector: 'app-register',
@@ -12,6 +13,7 @@ export class RegisterComponent {
   
   message!: String;
   classMessage!: String;
+
 
   // Paso 2 (Reactive Forms): Define estructura
   registerForm: FormGroup = this.formBuilder.group({
@@ -36,20 +38,14 @@ export class RegisterComponent {
         Validators.email
       ]
     ],
-    password: [ 
-      '',
-      [ 
-        Validators.required,
-        Validators.minLength( 6 ),
-        Validators.maxLength( 12 )
-      ]
-    ]
+    password: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.pass ) ] ]
   });
 
   // Paso 1 (Reactive Forms): Inyeccion de dependencias
   constructor( 
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private validationFormsService: ValidateFormsService
   ) {}
 
   // Paso 4 (Reactive Forms): Obtener datos del formulario
