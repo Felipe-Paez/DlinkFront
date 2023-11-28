@@ -55,15 +55,7 @@
       <small *ngIf="loginForm.get( 'password' )?.errors?.[ 'required' ]">
         Password required
       </small>
-      <small
-        *ngIf="loginForm.get( 'password' )?.errors?.[ 'pattern' ]"
-      >
-        Less than 8 characters
-        At least a number
-        At least a Capital letter
-        At least a special character
 
-      </small>
     </div>
   </div>
   <div class="field">
