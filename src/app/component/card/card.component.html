@@ -1,12 +1,12 @@
 
     <mat-card class="flip">
-        <div class="front" style="background-image: url({{product.urlImage}});"></div>
+        <div class="front" style="background-image: url({{portfolio.urlbanner}});"></div>
         <div class="back">
-            <h2>{{product.name}}</h2>
+            <h2>{{portfolio.name}}</h2>
             <p>Rating:</p>
-            <p>Estilo de diseño:{{product.description}}</p>
+            <p>Estilo de diseño:{{portfolio.style}}</p>
             <p>Rango de precios:</p>
-            <button class="card-button">Ver Perfil</button>
+            <button class="card-button" routerLink="/portfolio/{{portfolio.name}}">Ver Perfil</button>
 
         </div>
     </mat-card>

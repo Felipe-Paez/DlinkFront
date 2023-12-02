@@ -1,0 +1,25 @@
+
+.pfp{
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 18%;
+    margin-right: 40%;
+}
+ 
+.profile{
+    background-color: #a9a9a9;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.banner{
+   margin-top: 3%;
+   width: 60%;
+   height: 40%; 
+   border-radius: 10px;
+   object-fit: cover;
+}

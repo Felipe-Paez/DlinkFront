@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from 'src/app/services/products.service';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-cards',
@@ -8,14 +8,14 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class CardsComponent {
   category: string | undefined;
-  products: any;
+  portfolios: any;
 
-  constructor(private productsService:ProductsService ){}
+  constructor(private portfolioService:PortfolioService ){}
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe((data) => {
+    this.portfolioService.getAllPortfolios().subscribe((data) => {
        console.log(data)
-       this.products = data.data
+       this.portfolios = data.data
     })
   }
   
