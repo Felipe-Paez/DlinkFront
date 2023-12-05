@@ -4,7 +4,7 @@
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-top: 18%;
+    margin-top: 260px;
     margin-right: 40%;
 }
  
@@ -19,7 +19,8 @@
 .banner{
    margin-top: 3%;
    width: 60%;
-   height: 40%; 
+   height: 18rem; 
    border-radius: 10px;
    object-fit: cover;
 }
+
