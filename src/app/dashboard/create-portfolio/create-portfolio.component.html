@@ -1,0 +1,144 @@
+
+<form
+  class="form form-portfolio"
+  [formGroup]="portfolioForm"
+  (ngSubmit)="createPortfolio()"
+  autocomplete="off"
+>
+  
+  <p>Registra nuevos portfolioos. Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Nombre*</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Nombre del portfolio"
+      minlength="3"
+    />
+    <div
+      *ngIf="portfolioForm.get( 'name' )?.invalid && ( portfolioForm.get( 'name' )?.dirty || portfolioForm.get( 'name' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="portfolioForm.get( 'name' )?.errors?.[ 'required' ]">
+        Nombre de portfolioo es requerido.
+      </small>
+      <small *ngIf="portfolioForm.get( 'name' )?.errors?.[ 'minlength' ]">
+        Nombre de portfolioo debe tener al menos 3 caracteres.
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del portfolioo"
+    />
+    <div
+      *ngIf="portfolioForm.get( 'price' )?.invalid && ( portfolioForm.get( 'price' )?.dirty || portfolioForm.get( 'price' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="portfolioForm.get( 'price' )?.errors?.[ 'required' ]">
+        Precio del portfolioo es requerido.
+      </small>
+      <small *ngIf="portfolioForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
+        El precio debe ser mayor o igual a cero
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="quantity">Cantidad*</label>
+    <input
+      id="quantity"
+      class="input-field"
+      type="number"
+      formControlName="quantity"
+      placeholder="Cantidad disponible del portfolioo"
+    />
+    <div
+      *ngIf="portfolioForm.get( 'quantity' )?.invalid && ( portfolioForm.get( 'quantity' )?.dirty || portfolioForm.get( 'quantity' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="portfolioForm.get( 'quantity' )?.errors?.[ 'required' ]">
+        Cantidad del portfolioo es requerido.
+      </small>
+      <small *ngIf="portfolioForm.get( 'quantity' )?.errors?.[ 'invalidQuantity' ]">
+        El precio debe ser mayor a cero
+      </small>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="image">Imagen del portfolio*</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+    />
+    <div
+      *ngIf="portfolioForm.get( 'urlImage' )?.invalid && ( portfolioForm.get( 'urlImage' )?.dirty || portfolioForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="portfolioForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL no tiene formato de imagen permitido
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="category">Style</label>
+    <select
+      id="category"
+      class="input-field"
+      formControlName="Style"
+    >
+      <option value="" selected>Seleccione...</option>
+      <option
+        *ngFor="let category of categories"
+        [value]="category.value"
+      >{{ category.name }}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del portfolioo"
+      cols="20"
+      rows="5"
+      minlength="3"
+      maxlength="140"
+    ></textarea>
+    <div
+      *ngIf="portfolioForm.get( 'description' )?.invalid && ( portfolioForm.get( 'description' )?.dirty || portfolioForm.get( 'description' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="portfolioForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
+        La descripción debe tener una longitud de entre 3 a 140 caracteres
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="this.portfolioForm.invalid"
+    >Crear portfolioo</button>
+  </div>
+
+  <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <pre class="error">name {{ portfolioForm.get( 'name' )?.errors | json }}</pre>
+    <pre class="error">price {{ portfolioForm.get( 'price' )?.errors | json }}</pre>
+    <pre class="error">quantity {{ portfolioForm.get( 'quantity' )?.errors | json }}</pre>
+    <pre class="error">urlImage {{ portfolioForm.get( 'urlImage' )?.errors | json }}</pre>
+    <pre class="error">category {{ portfolioForm.get( 'category' )?.errors | json }}</pre>
+    <pre class="error">description {{ portfolioForm.get( 'description' )?.errors | json }}</pre>
+  </div>
+</form>
