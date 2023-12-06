@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsHeaderComponent } from './pages/home/products-header/products-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import { NewProductComponent } from './dashboard/create-portfolio/create-portfolio.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { LoginComponent } from './pages/login/login.component';
     CardComponent,
     FilterComponent,
     FooterComponent,
-    ProductsHeaderComponent
+    ProductsHeaderComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
