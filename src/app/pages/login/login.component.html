@@ -12,12 +12,12 @@
       id="email"
       class="input-field"
       type="email"
-      formControlName="username"
+      formControlName="email"
       placeholder="Email or phone"
     />
 
     <div
-    *ngIf="loginForm.get( 'username' )?.invalid && ( loginForm.get( 'username' )?.dirty || loginForm.get( 'username' )?.touched )"
+    *ngIf="loginForm.get( 'email' )?.invalid && ( loginForm.get( 'email' )?.dirty || loginForm.get( 'email' )?.touched )"
     class="error-message">
     <!--
       loginForm.get( 'email' )?.invalid verifica si el campo de email es inválido.
@@ -25,10 +25,10 @@
       loginForm.get( 'email' )?.touched verifica si el campo de email ha sido tocado.
     -->
 
-    <small *ngIf="loginForm.get( 'username' )?.errors?.[ 'required' ]">
+    <small *ngIf="loginForm.get( 'email' )?.errors?.[ 'required' ]">
       Username is required
     </small>
-    <small *ngIf="loginForm.get( 'username' )?.errors?.[ 'pattern' ]">
+    <small *ngIf="loginForm.get( 'email' )?.errors?.[ 'pattern' ]">
       Enter a valid username
     </small>
   </div>

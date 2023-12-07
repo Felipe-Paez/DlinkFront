@@ -19,15 +19,15 @@ export class PortfolioService {
    }
   
   getAllPortfolios(){
-    return this.http.get<ResponsePortfolio>("http://localhost:4000/api/products/")
+    return this.http.get<ResponsePortfolio>("http://localhost:4000/api/portfolio/")
   }
   getPortfolioByName(name:string){
-    return this.http.get<ResponsePortfolio>("http://localhost:4000/api/products/"+name)
+    return this.http.get<ResponsePortfolio>("http://localhost:4000/api/portfolio/"+name)
   }
 
   createPortfolio(data: Portfolio){
     return this.http.post<ResponsePortfolio>( 
-      "http://localhost:4000/api/products/", 
+      "http://localhost:4000/api/portfolio/", 
       data, 
       { headers: this.headers } 
     );
