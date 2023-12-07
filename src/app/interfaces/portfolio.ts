@@ -4,7 +4,7 @@ export interface Portfolio {
         name: string,
         description?: string,
         price?: number, 
-        style?: string,  
+        style?: string[],  
         createdAt: string,
         updatedAt: string,
         urlpfp?: string,

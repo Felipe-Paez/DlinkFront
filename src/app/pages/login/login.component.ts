@@ -13,7 +13,7 @@ export class LoginComponent {
   classMessage!: String;
 
   loginForm: FormGroup = this.formBuilder.group({
-    username: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.email ) ] ],
+    email: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.email ) ] ],
     password: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.pass ) ] ]
   });
 
