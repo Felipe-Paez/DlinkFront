@@ -17,7 +17,7 @@ h1{
 }
 
 .mat-icon{
-    padding-top: 1.5px;
+    padding: 1.5px 0 0  30px;
     height: 48px!important;
     font-size: 3rem;
     width: 48px!important;
@@ -25,4 +25,10 @@ h1{
     background-clip: text!important;
     color: transparent!important;
     background-color: white!important;
+}
+
+.left{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
 }
