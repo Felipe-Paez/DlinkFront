@@ -18,8 +18,8 @@ export class HeaderComponent {
   ngOnInit(){
 
     const user = localStorage.getItem("user");
-    const data = user?user:'';
-    const userData = (typeof data == 'string')?{}:JSON.parse(data);
+    const data = user?user:{};
+    const userData = JSON.parse(data?);
     console.log(userData);
   }
 
