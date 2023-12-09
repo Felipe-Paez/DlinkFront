@@ -5,8 +5,10 @@
   (ngSubmit)="createPortfolio()"
   autocomplete="off"
 >
+  <div class="fieldTitle">
+    <p class="parrafo">Fill in this form to create your Portfolio</p>
+  </div>
   
-  <p>Fill in this for to create a new Portfolio</p>
   <div class="field">
     <label class="label" for="name">Name*</label>
     <input
@@ -39,7 +41,7 @@
       class="input-field"
       type="number"
       formControlName="price"
-      placeholder="Portfolio's price"
+      placeholder="Price/h consultation"
     />
     <div
       *ngIf="portfolioForm.get( 'price' )?.invalid && ( portfolioForm.get( 'price' )?.dirty || portfolioForm.get( 'price' )?.touched )"
