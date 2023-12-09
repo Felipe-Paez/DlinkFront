@@ -21,6 +21,8 @@ export class AuthService {
 
   /** Getter */
   get user() {
+    console.log( this.authData );
+    
     // Evita modificaciones sobre el atributo de la clase "Inmutable"
     return { ...this.authData };
   }
@@ -45,10 +47,11 @@ export class AuthService {
     return this.http.post<ResponseAuth>( URL, credentials )
       .pipe(
         tap( ( response: ResponseAuth ) => {
+          console.log(response)
           localStorage.setItem( 'token', response.token! );
-
+          localStorage.setItem( 'user', JSON.stringify(response.userData) );
           // this.router.navigateByUrl( '/dashboard' );
-          this.router.navigate( [ 'dashboard' ] );
+          this.router.navigate( [ 'cards' ] );
         }),
         map( ( response: ResponseAuth ) => response.ok ),
         catchError( error => {

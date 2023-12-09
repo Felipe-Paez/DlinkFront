@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  userData!:any
 
+  constructor(
+    public router: Router
+    ) {
+  }
+
+  ngOnInit(){
+
+    const user = localStorage.getItem("user");
+    const data = user?user:{};
+    const userData = JSON.parse(data?);
+    console.log(userData);
+  }
+
+  createProfile(){
+
+    if( this.userData.hasOwnProperty( 'email' ) ) {
+      console.log("1")
+      //this.router.navigate( [ 'portfolio', 'create' ] );
+    }
+    else {
+      console.log("2")
+      //this.router.navigate( [ 'register' ] );
+    }
+    
+  }
 }
 
