@@ -1,20 +1,36 @@
 .form-auth,
 .form-portfolio {
   max-width: 50%;
-  border: 1px dotted;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #222222;
 }
 
 .form-auth .field,
 .form-portfolio .field {
   display: flex;
   flex-direction: column;
-  margin: 0.3rem 0;
+  margin: 5px;
+  color:white;
+  width:80%
 }
+
+
+.form-auth .field,
+.form-portfolio .field .label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  color:white;
+  width:80%
+}
+
 
 .form .field {
   /* border: 1px dotted blue; */
@@ -23,3 +39,4 @@
   margin: 0.3rem 0;
   width: 80%;
 }
+
