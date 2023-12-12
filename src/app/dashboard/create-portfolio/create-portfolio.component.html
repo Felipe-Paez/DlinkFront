@@ -66,10 +66,10 @@
       id="image"
       class="input-field"
       type="text"
-      formControlName="urlImage"
+      formControlName="urlpfp"
     />
     <div
-      *ngIf="portfolioForm.get( 'urlImage' )?.invalid && ( portfolioForm.get( 'urlImage' )?.dirty || portfolioForm.get( 'urlImage' )?.touched )"
+      *ngIf="portfolioForm.get( 'urlpfp' )?.invalid && ( portfolioForm.get( 'urlpfp' )?.dirty || portfolioForm.get( 'urlpfp' )?.touched )"
       class="error-message"
     >
       <small *ngIf="portfolioForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
@@ -84,10 +84,10 @@
       id="image"
       class="input-field"
       type="text"
-      formControlName="urlImage2"
+      formControlName="urlbanner"
     />
     <div
-      *ngIf="portfolioForm.get( 'urlImage' )?.invalid && ( portfolioForm.get( 'urlImage' )?.dirty || portfolioForm.get( 'urlImage' )?.touched )"
+      *ngIf="portfolioForm.get( 'urlbanner' )?.invalid && ( portfolioForm.get( 'urlbanner' )?.dirty || portfolioForm.get( 'urlbanner' )?.touched )"
       class="error-message"
     >
       <small *ngIf="portfolioForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
@@ -102,7 +102,7 @@
     <select
       id="category"
       class="input-field"
-      formControlName="Style"
+      formControlName="style"
     >
       <option value="" selected>Select...</option>
       <option
@@ -140,16 +140,7 @@
       class="btn btn-primary button"
       type="submit"
       [disabled]="this.portfolioForm.invalid"
-    >Creat</button>
-  </div>
-
-  <div class="errors">
-    <h3 class="title-errors">Errors</h3>
-    <pre class="error">name {{ portfolioForm.get( 'name' )?.errors | json }}</pre>
-    <pre class="error">price {{ portfolioForm.get( 'price' )?.errors | json }}</pre>
-    <pre class="error">quantity {{ portfolioForm.get( 'quantity' )?.errors | json }}</pre>
-    <pre class="error">urlImage {{ portfolioForm.get( 'urlImage' )?.errors | json }}</pre>
-    <pre class="error">urlImage2 {{ portfolioForm.get( 'urlImage' )?.errors | json }}</pre>
-    <pre class="error">description {{ portfolioForm.get( 'description' )?.errors | json }}</pre>
+    >Create</button>
   </div>
 </form>
+<div class="space"></div>

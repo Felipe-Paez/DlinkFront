@@ -7,7 +7,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent {
-  category: string | undefined;
+  style: string | undefined;
   portfolios: any;
 
   constructor(private portfolioService:PortfolioService ){}
@@ -20,6 +20,6 @@ export class CardsComponent {
   }
   
 onShowCategory(newCategory: string): void {
-  this.category = newCategory;
+  this.style = newCategory;
 }
 }
