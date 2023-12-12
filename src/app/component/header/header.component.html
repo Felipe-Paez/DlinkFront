@@ -3,21 +3,14 @@
     <h1 routerLink="/home">D'link</h1>
 
 
-    <div class="left"> <mat-icon  mat-icon-button>queue</mat-icon>
-        <mat-icon  mat-icon-button [matMenuTriggerFor]="menu" >account_circle</mat-icon></div>
+    <div class="left"> <mat-icon  mat-icon-button *ngIf="router.url === '/cards'" (click)="createProfile()">queue</mat-icon>
+        <mat-icon mat-icon-button [matMenuTriggerFor]="menu" >account_circle</mat-icon></div>
       
 
-    
-    <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu" >
         <a mat-menu-item routerLink="/register">Register</a>
         <a mat-menu-item routerLink="/login">Login</a>
     
 
 
     </mat-menu>
-
-    
-
-
-
-</mat-toolbar>

@@ -5,16 +5,18 @@
   (ngSubmit)="createPortfolio()"
   autocomplete="off"
 >
+  <div class="fieldTitle">
+    <p class="parrafo">Fill in this form to create your Portfolio</p>
+  </div>
   
-  <p>Registra nuevos portfolioos. Diligencia cada uno de los campos según sean requeridos.</p>
   <div class="field">
-    <label for="name">Nombre*</label>
+    <label class="label" for="name">Name*</label>
     <input
       id="name"
       class="input-field"
       type="text"
       formControlName="name"
-      placeholder="Nombre del portfolio"
+      placeholder="Portfolio's name"
       minlength="3"
     />
     <div
@@ -22,58 +24,44 @@
       class="error-message"
     >
       <small *ngIf="portfolioForm.get( 'name' )?.errors?.[ 'required' ]">
-        Nombre de portfolioo es requerido.
+        Portfolio's name is required.
       </small>
       <small *ngIf="portfolioForm.get( 'name' )?.errors?.[ 'minlength' ]">
-        Nombre de portfolioo debe tener al menos 3 caracteres.
+        At least three caracthers.
       </small>
     </div>
   </div>
+
+
+
   <div class="field">
-    <label for="price">Precio</label>
+    <label for="price" class="label">Price*</label>
     <input
       id="price"
       class="input-field"
       type="number"
       formControlName="price"
-      placeholder="Precio del portfolioo"
+      placeholder="Price/h consultation"
     />
     <div
       *ngIf="portfolioForm.get( 'price' )?.invalid && ( portfolioForm.get( 'price' )?.dirty || portfolioForm.get( 'price' )?.touched )"
       class="error-message"
     >
       <small *ngIf="portfolioForm.get( 'price' )?.errors?.[ 'required' ]">
-        Precio del portfolioo es requerido.
+        Portfolio's price is required
       </small>
       <small *ngIf="portfolioForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
-        El precio debe ser mayor o igual a cero
-      </small>
-    </div>
-  </div>
-  <div class="field">
-    <label for="quantity">Cantidad*</label>
-    <input
-      id="quantity"
-      class="input-field"
-      type="number"
-      formControlName="quantity"
-      placeholder="Cantidad disponible del portfolioo"
-    />
-    <div
-      *ngIf="portfolioForm.get( 'quantity' )?.invalid && ( portfolioForm.get( 'quantity' )?.dirty || portfolioForm.get( 'quantity' )?.touched )"
-      class="error-message"
-    >
-      <small *ngIf="portfolioForm.get( 'quantity' )?.errors?.[ 'required' ]">
-        Cantidad del portfolioo es requerido.
-      </small>
-      <small *ngIf="portfolioForm.get( 'quantity' )?.errors?.[ 'invalidQuantity' ]">
-        El precio debe ser mayor a cero
+        Price must be equal or higher than 0
       </small>
     </div>
   </div>
 
+
+
+
+
   <div class="field">
-    <label for="image">Imagen del portfolio*</label>
+    <label for="image" class="label">Portfolio's Profile</label>
     <input
       id="image"
       class="input-field"
@@ -85,31 +73,54 @@
       class="error-message"
     >
       <small *ngIf="portfolioForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
-        La URL no tiene formato de imagen permitido
+        La URL does not have an allowed format
       </small>
     </div>
   </div>
+
   <div class="field">
-    <label for="category">Style</label>
+    <label for="image" class="label">Portfolio's background</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage2"
+    />
+    <div
+      *ngIf="portfolioForm.get( 'urlImage' )?.invalid && ( portfolioForm.get( 'urlImage' )?.dirty || portfolioForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="portfolioForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL does not have an allowed format
+      </small>
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label for="category" class="label">Style</label>
     <select
       id="category"
       class="input-field"
       formControlName="Style"
     >
-      <option value="" selected>Seleccione...</option>
+      <option value="" selected>Select...</option>
       <option
         *ngFor="let category of categories"
         [value]="category.value"
       >{{ category.name }}</option>
     </select>
   </div>
+
+
+
   <div class="field">
-    <label for="description">Descripción</label>
+    <label for="description" class="label">Description</label>
     <textarea
       id="description"
       class="input-field"
       formControlName="description"
-      placeholder="Descripción del portfolioo"
+      placeholder="Portfolio's description"
       cols="20"
       rows="5"
       minlength="3"
@@ -120,7 +131,7 @@
       class="error-message"
     >
       <small *ngIf="portfolioForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
-        La descripción debe tener una longitud de entre 3 a 140 caracteres
+        Description needs to be from 3 to 140 caracteres long
       </small>
     </div>
   </div>
@@ -129,7 +140,7 @@
       class="btn btn-primary button"
       type="submit"
       [disabled]="this.portfolioForm.invalid"
-    >Crear portfolioo</button>
+    >Creat</button>
   </div>
 
   <div class="errors">
@@ -138,7 +149,7 @@
     <pre class="error">price {{ portfolioForm.get( 'price' )?.errors | json }}</pre>
     <pre class="error">quantity {{ portfolioForm.get( 'quantity' )?.errors | json }}</pre>
     <pre class="error">urlImage {{ portfolioForm.get( 'urlImage' )?.errors | json }}</pre>
-    <pre class="error">category {{ portfolioForm.get( 'category' )?.errors | json }}</pre>
+    <pre class="error">urlImage2 {{ portfolioForm.get( 'urlImage' )?.errors | json }}</pre>
     <pre class="error">description {{ portfolioForm.get( 'description' )?.errors | json }}</pre>
   </div>
 </form>

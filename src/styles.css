@@ -1,11 +1,6 @@
 @tailwind utilities;
 
 
-
-
-
-
-
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
@@ -129,7 +124,7 @@ a {
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: 370.2px;
+    width: 300px;
     >.front,
     >.back {
       display: block;
