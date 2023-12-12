@@ -10,15 +10,15 @@ export class FilterComponent {
   @Output() showCategory= new EventEmitter<string>();
 
   
-  categories = ["Industrial", "Minimalista", "Wabi-Sabi","Contemporáneo", "Art Deco","Retro","Rústico", "Vintage"];
+  styles = ["Industrial", "Minimalista", "Wabi-Sabi","Contemporáneo", "Art Deco","Retro","Rústico", "Vintage"];
 
 
   constructor(){}
 
   onInit(): void{}
 
-  onShowCatergory(category : string): void{
-    this.showCategory.emit(category)
+  onShowCatergory(style : string): void{
+    this.showCategory.emit(style)
 
   }
 

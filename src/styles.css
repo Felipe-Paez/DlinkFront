@@ -148,10 +148,6 @@ a {
       }
     }
 }
-footer#footer {
-    height: 3.5rem;
-    background-color: #c1e1c1;
-}
 
 .content {
     display: flex;
