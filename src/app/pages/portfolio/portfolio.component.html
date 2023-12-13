@@ -1,13 +1,24 @@
 <div class="main">
+
     <div class="profile">
         <img class="banner" src="{{portfolio.urlbanner}}" alt="Banner">
         <img class="banner2" src="{{portfolio.urlbanner}}" alt="Banner">
         <img class="pfp" src="{{portfolio.urlpfp}}" alt="Profile">
+    </div >   
 
+    <div class="nameSection">
+        <div class="nombrePortafolio">
+            <h2 class="name">{{portfolio.name}}</h2>
+        </div>
+        <div class="stylePortafolio">
+            <h3 class="style"> Style: {{portfolio.style}}</h3>
+        </div>
+        <div class="pricePortafolio">
+            <h4 class="price"> Price/hour : ${{portfolio.price}} USD </h4>
+        </div>
+    
     </div>
-
-
-        <h2 class="name">{{portfolio.name}}</h2>
 
     
 </div>
+
