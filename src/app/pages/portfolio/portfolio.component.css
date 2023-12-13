@@ -1,12 +1,21 @@
-
+.main{
+    background-color: #a9a9a9;
+    height: 100%;
+}
 .pfp{
     position: absolute;
     border-radius: 50%;
     width: 160px;
     height: 160px;
     margin-top: 260px;
-    margin-right: 50%;
+    /* margin-right: 50%; */
     z-index: 1;
+}
+
+@media (min-width: 568px ) {
+    .pfp {
+        margin-right: 50%;
+    }
 }
  
 .profile{
@@ -26,6 +35,13 @@
 
     
 } 
+
+.name{
+    font-family: space;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 45px;
+}
 
 .banner2{
     
