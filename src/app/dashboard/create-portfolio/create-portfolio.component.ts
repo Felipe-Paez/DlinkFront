@@ -12,12 +12,12 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 export class NewProductComponent {
   categories = [
     { name: 'Industrial', value: 'Industrial' },
-    { name: 'Minimalista', value: 'Minimalista' },
+    { name: 'Minimalist', value: 'Minimalist' },
     { name: 'Wabi-Sabi', value: 'Wabi-Sabi' },
-    { name: 'Contemporáneo', value: 'Contemporáneo' },
+    { name: 'Contempory', value: 'Contemporary' },
     { name: 'Art-Deco', value: 'Art-Deco' },
     { name: 'Retro', value: 'Retro' },
-    { name: 'Rústico', value: 'Rústico' },
+    { name: 'Rustic', value: 'Rustic' },
     { name: 'Vintage', value: 'Vintage' }
 
 
