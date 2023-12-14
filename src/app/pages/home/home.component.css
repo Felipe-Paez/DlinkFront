@@ -6,6 +6,7 @@
     margin: 0 auto;
     justify-content: space-around;
     height: 400px;
+    font-family: "Raleway";
 }
 
 .pt-text{
@@ -58,4 +59,59 @@
   width: 603px;
   height: 327px;
   
+}
+
+
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem 1rem 1rem 1rem;
+    background: rgba(255, 51, 153, .05);
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+
+
+.video-container {
+margin: 8px;
+}
+
+.dlink .row .video-container img{
+    width: 96%;
+    margin-right: 30rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dlink .row .content p{
+    font-size: 2rem;
+    color: #110101;
+    padding: 0 31rem;
+    padding-top: 3rem;
+    line-height: 2.5rem;
+    text-transform: none;
+    text-align: left;
+   
+}
+
+.dlink .row .video-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: #100000;
+    width: 92%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.dlink .row{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
 }
