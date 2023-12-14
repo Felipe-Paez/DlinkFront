@@ -183,12 +183,12 @@ a {
       background-position: center!important;
       height: 220px;
       padding: 1rem 2rem;
-      background: #313131;
+      background: #515151;
       border-radius: 10px;
       p {
         font-size: 0.9125rem;
         line-height: 160%;
-        color: #999;
+        color:white;
       }
     }
 }
