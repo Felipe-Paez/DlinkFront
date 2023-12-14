@@ -7,7 +7,7 @@ class="min-h-full max-w-7x1 mx-auto border-x" style="background-color: #a9a9a9;"
     </mat-drawer >
     <mat-drawer-content class="p-6" >
         <app-products-header></app-products-header>
-        {{category}}
+        {{style}}
         <div class="content">
             <app-card *ngFor="let portfolio of portfolios"  [portfolio]="portfolio"></app-card>
 </div>

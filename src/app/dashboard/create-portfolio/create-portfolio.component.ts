@@ -53,7 +53,7 @@ export class NewProductComponent {
     this.portfolioForm.reset();
 
     setTimeout( () => {
-      this.router.navigate( [ 'dashboard', 'products' ] );
+      this.router.navigate( [ 'cards' ] );
     }, 1000 );
   }
 }
