@@ -2,11 +2,14 @@
     display: flex;
     background-size: 1700px 475px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://bihomes.es/app/uploads/2022/10/diseno-interiores-salon-casa.jpg);
-    padding: 2.3rem;
+    padding: 2rem 1rem;
     margin: 0 auto;
     justify-content: space-around;
     height: 400px;
     font-family: "Raleway";
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .pt-text{
@@ -19,22 +22,28 @@
 
 .pt-title
 {
-    line-height: 90px!important;
-    font-size: 5rem;
-    margin: 1rem 0;
-    padding: 10px;
+    font-size: 2.6rem;
+    line-height: 1.2;
 }
 
 .pt-description{
-    line-height: 50px;
+    line-height: 1.2;
     flex-wrap: wrap;
-    font-size: 3rem;
+    font-size: 1.8rem;
     margin: 0;
+    gap: 0;
+}
+
+.image-responsive {
+    width: 100%;
+    height: auto;
 }
 
 
 
-.about{
+
+
+/* .about{
     display: flex;
     height: 400px;
     align-items: center;
@@ -42,15 +51,17 @@
     flex-direction: row;
     padding: 3rem;
     justify-content: space-between;
-}
+} */
+
 
 
 
 .ab-desc{
     display: flex;
     flex-wrap: wrap;
-    font-size: 2rem;
-    width: 50%;
+    font-size: 1.3rem;
+    width: 90%;
+    margin: 2rem auto 1rem auto;
 }
 
 .ab-img{ 
@@ -66,11 +77,11 @@
 .heading{
     text-align: center;
     font-size: 4rem;
-    color: #333;
+    color: white;
     padding: 2rem 1rem 1rem 1rem;
-    background: rgba(255, 51, 153, .05);
+    background: #222222;
     margin-bottom: 20px;
-    font-size: 5rem;
+    font-size: 2.8rem;
 }
 
 
@@ -85,16 +96,6 @@ margin: 8px;
     object-fit: cover;
 }
 
-.dlink .row .content p{
-    font-size: 2rem;
-    color: #110101;
-    padding: 0 31rem;
-    padding-top: 3rem;
-    line-height: 2.5rem;
-    text-transform: none;
-    text-align: left;
-   
-}
 
 .dlink .row .video-container h3{
     position: absolute;
@@ -108,10 +109,50 @@ margin: 8px;
 }
 
 .dlink .row{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    padding: 2rem 0;
     padding-bottom: 3rem;
+    height: 22rem;
+}
+
+
+@media ( min-width: 576px ) {
+    .pt-text {
+        gap: 1rem;
+    }
+    .pt-description {
+        font-size: 2.1rem;
+    }
+    .pt-title {
+        font-size: 3.4rem;
+    }
+}
+
+@media ( min-width: 992px ) {
+    .pt-text {
+        gap: 2rem;
+    }
+    .pt-description {
+        font-size: 2.4rem;
+    }
+    .pt-title {
+        font-size: 4rem;
+    }
+    #about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.4rem;
+    }
+    .ab-desc {
+        font-size: 1.15rem;
+        padding-left: 3rem;
+    }
+    
+}
+
+@media ( min-width: 1200px ) {
+    .ab-desc {
+        font-size: 1.5rem;
+        padding-left: 3rem;
+        line-height: 1.4;
+    }
 }
