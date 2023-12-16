@@ -87,7 +87,7 @@
 
 .video-container {
 margin: 8px;
-}
+}   
 
 .dlink .row .video-container img{
     width: 96%;
@@ -205,7 +205,7 @@ p.proyeccion-content {
         text-align: justify;
     }
     .door-content {
-        height: 46rem;
+        height: 57rem;
         flex-direction: column;
     }
     .ab-desc {
