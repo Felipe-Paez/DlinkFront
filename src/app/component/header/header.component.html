@@ -1,11 +1,16 @@
 <mat-toolbar  style="--mat-toolbar-title-text-line-height: 100px;" class="max-w-7x1 mx-auto justify-between" color="primary">
 
+    <mat-icon class="left" mat-icon-button  routerLink="/cards">arrow_back</mat-icon>
     <h1 routerLink="/home">D'link</h1>
+
+
     
    <div class="button"></div>
 
     <div class="left"> <mat-icon  mat-icon-button *ngIf="router.url === '/cards'" (click)="createProfile()">queue</mat-icon>
+        
         <mat-icon mat-icon-button [matMenuTriggerFor]="menu" >account_circle</mat-icon></div>
+        
       
 
     <mat-menu #menu="matMenu" >
