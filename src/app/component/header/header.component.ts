@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent {
   user!:any
+  logged = false;
 
   constructor(
     public router: Router
@@ -19,12 +20,15 @@ export class HeaderComponent {
     const item = localStorage.getItem("user");    
      this.user=item ? JSON.parse(item) : null;
     console.log(this.user);
+
+    if (this.user?.email && this.user?.role && this.user?.name && this.user?.lastname && this.user?._id){
+      this.logged = true;
+    }
   }
 
   createProfile(){
   
     if (this.user?.email && this.user?.role && this.user?.name && this.user?.lastname && this.user?._id){
-      console.log("1")
       this.router.navigate( [ 'portfolio', 'create' ] );
     }
     else{
@@ -32,5 +36,13 @@ export class HeaderComponent {
     }
     
   }
+
+  logout(){
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    window.location.reload()
+  }
+
+
 }
 

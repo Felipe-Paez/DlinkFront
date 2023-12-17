@@ -1,24 +1,30 @@
-<mat-toolbar  style="--mat-toolbar-title-text-line-height: 100px;" class="max-w-7x1 mx-auto justify-between" color="primary">
+<mat-toolbar style="--mat-toolbar-title-text-line-height: 100px;" class="max-w-7x1 mx-auto justify-between"
+    color="primary">
 
-    <mat-icon class="left" mat-icon-button  routerLink="/cards">arrow_back</mat-icon>
+    <mat-icon class="left" mat-icon-button routerLink="/cards">arrow_back</mat-icon>
     <h1 routerLink="/home">D'link</h1>
 
 
-    
-   <div class="button"></div>
 
-    <div class="left"> <mat-icon  mat-icon-button *ngIf="router.url === '/cards'" (click)="createProfile()">queue</mat-icon>
-        
-        <mat-icon mat-icon-button [matMenuTriggerFor]="menu" >account_circle</mat-icon></div>
-        
-      
+    <div class="button"></div>
 
-    <mat-menu #menu="matMenu" >
-        <a mat-menu-item routerLink="/register">Register</a>
-        <a mat-menu-item routerLink="/login">Login</a>
-    
+    <div class="left"> <mat-icon mat-icon-button *ngIf="router.url === '/cards'"
+            (click)="createProfile()">queue</mat-icon>
+
+        <mat-icon mat-icon-button [matMenuTriggerFor]="menu">account_circle</mat-icon>
+    </div>
+
+
+    <mat-menu #menu="matMenu">
+        <ng-container *ngIf="logged; else login">
+            <a mat-menu-item routerLink="/portfolio/{{user.name}}">My Portfolio</a>
+            <a mat-menu-item  (click)="logout()">Logout</a>
+        </ng-container>
+        <ng-template #login> 
+            <a mat-menu-item routerLink="/register">Register</a>
+            <a mat-menu-item routerLink="/login">Login</a>
+        </ng-template>
+
 
 
     </mat-menu>
-
-    
