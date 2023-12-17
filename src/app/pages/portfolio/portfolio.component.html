@@ -4,7 +4,7 @@
         <img class="banner" src="{{portfolio.urlbanner}}" alt="Banner">
         <img class="banner2" src="{{portfolio.urlbanner}}" alt="Banner">
         <img class="pfp" src="{{portfolio.urlpfp}}" alt="Profile">
-    </div >   
+    </div>
 
     <div class="nameSection">
         <div class="nombrePortafolio">
@@ -18,28 +18,25 @@
         <div class="pricePortafolio">
             <h4 class="price"> Price/hour : ${{portfolio.price}} USD </h4>
         </div>
-<<<<<<< HEAD
-    </div>
-    <div *ngIf="logged">
-        
-    </div>
-=======
 
         <div class="descriptionPortfolio">
-           
+
             <h5 class="description">Description:</h5>
             <div class="bodyContainer">
-                <h6 class="descriptionBody" >{{portfolio.description}} </h6>
+                <h6 class="descriptionBody">{{portfolio.description}} </h6>
             </div>
 
 
-        </div > 
+        </div>
 
     </div>
+     
+    <div class="gallery">
+        <app-image *ngFor="let image of images"  [image]="image"></app-image>
+    </div>
 
+    <div *ngIf="logged">
+        <mat-icon style="color: black;font-size: 6rem;max-width: fit-content;max-height: fit-content;height: auto;width: auto;">add_circle</mat-icon>
+    </div>
 
-
->>>>>>> 04bc89304757e1acbceec2a596a44c475051be59
-    
 </div>
-

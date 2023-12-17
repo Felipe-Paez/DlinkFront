@@ -33,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { NewProductComponent } from './dashboard/create-portfolio/create-portfolio.component';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { ImageComponent } from './component/image/image.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
     FilterComponent,
     FooterComponent,
     ProductsHeaderComponent,
-    NewProductComponent
+    NewProductComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
