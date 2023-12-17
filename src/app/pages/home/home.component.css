@@ -18,13 +18,16 @@
 
 .pt-title
 {
+    font-family: "raleway"!important;
     line-height: 90px!important;
     font-size: 5rem;
     margin: 1rem 0;
     padding: 10px;
+    font-weight: bold;
 }
 
 .pt-description{
+    font-family: "raleway"!important;
     line-height: 50px;
     flex-wrap: wrap;
     font-size: 3rem;
@@ -46,6 +49,7 @@
 
 
 .ab-desc{
+    font-family: "raleway"!important;
     display: flex;
     flex-wrap: wrap;
     font-size: 2rem;
@@ -53,6 +57,7 @@
 }
 
 .ab-img{ 
+  font-family: "raleway"!important;
   position: absolute;
   margin-left: 868px;
   width: 603px;
