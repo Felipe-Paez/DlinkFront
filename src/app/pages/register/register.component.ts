@@ -38,6 +38,18 @@ export class RegisterComponent {
         Validators.email
       ]
     ],
+
+    username: [ 
+      '',
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(13),
+      
+
+      ]
+    ],
+
     password: [ '', [ Validators.required, Validators.pattern( this.validationFormsService.pass ) ] ]
   });
 

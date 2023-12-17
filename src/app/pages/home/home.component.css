@@ -50,6 +50,7 @@
     flex-wrap: wrap;
     font-size: 2rem;
     width: 50%;
+    line-height: 35px;
 }
 
 .ab-img{ 
@@ -58,4 +59,29 @@
   width: 603px;
   height: 327px;
   
+}
+
+.about .startBotton {
+    position: absolute;
+    background-color: #018890 ;
+    margin-top: 400px;
+    margin-bottom: 125px;
+    margin-left: 230px;
+    width:200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.about .Start {
+font-family: "Raleway";
+margin-bottom: 0px;
+font-size: 20px;
+font-weight: bold;
+color: aliceblue;
+
+
 }
