@@ -2,14 +2,10 @@
     display: flex;
     background-size: 1700px 475px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://bihomes.es/app/uploads/2022/10/diseno-interiores-salon-casa.jpg);
-    padding: 2rem 1rem;
+    padding: 2.3rem;
     margin: 0 auto;
     justify-content: space-around;
     height: 400px;
-    font-family: "Raleway";
-    align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .pt-text{
@@ -22,34 +18,22 @@
 
 .pt-title
 {
-    font-family: "raleway"!important;
     line-height: 90px!important;
     font-size: 5rem;
     margin: 1rem 0;
     padding: 10px;
-    font-weight: bold;
 }
 
 .pt-description{
-    font-family: "raleway"!important;
     line-height: 50px;
-    font-size: 2.6rem;
-    line-height: 1.2;
     flex-wrap: wrap;
+    font-size: 3rem;
     margin: 0;
-    gap: 0;
-}
-
-.image-responsive {
-    width: 100%;
-    height: auto;
 }
 
 
 
-
-
-/* .about{
+.about{
     display: flex;
     height: 400px;
     align-items: center;
@@ -57,168 +41,21 @@
     flex-direction: row;
     padding: 3rem;
     justify-content: space-between;
-} */
-
+}
 
 
 
 .ab-desc{
-    font-family: "raleway"!important;
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.3rem;
-    width: 90%;
-    margin: 2rem auto 1rem auto;
+    font-size: 2rem;
+    width: 50%;
 }
 
 .ab-img{ 
-  font-family: "raleway"!important;
   position: absolute;
   margin-left: 868px;
   width: 603px;
   height: 327px;
   
-}
-
-
-
-.heading{
-    text-align: center;
-    font-size: 4rem;
-    color: white;
-    padding: 2rem 1rem 2rem 1rem;
-    background: #222222;
-    margin-bottom: 0;
-    font-size: 2.8rem;
-}
-
-
-.video-container {
-margin: 8px;
-}   
-
-.dlink .row .video-container img{
-    width: 96%;
-    margin-right: 30rem;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.dlink .row .video-container h3{
-    position: absolute;
-    top: 50%; transform: translateY(-50%);
-    font-size: 3rem;
-    background-color: #100000;
-    width: 92%;
-    padding: 1rem 2rem;
-    text-align: center;
-    mix-blend-mode: screen;
-}
-
-.dlink .row{
-    padding-bottom: 3rem; 
-}
-
-p.proyeccion-content {
-    margin: 2rem 1.4rem;
-    text-align: justify;
-    font-size: 1.3rem;
-    line-height: 1.4;
-}
-
-.door-paragraph {
-    display: none;
-}
-
-.door-content {
-    height: 25rem;
-}
-
-.door-content button.btn-cards {
-    background: #222222;
-    color: white;
-    font-size: 1.1rem;
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
-}
-
-@media ( min-width: 576px ) {
-    p.proyeccion-content {
-        margin: 2rem 1.4rem;
-        text-align: justify;
-    }
-    .door-content button.btn-cards {
-        font-size: 1.4rem;
-        padding: 0.8rem 2rem;
-    }
-    .door-content {
-        height: 36rem;
-    }
-    .pt-text {
-        gap: 1rem;
-    }
-    .pt-description {
-        font-size: 2.1rem;
-    }
-    .pt-title {
-        font-size: 3.4rem;
-    }
-}
-
-@media ( min-width: 992px ) {
-    p.proyeccion-content {
-        font-size: 1.15rem;
-    }
-    .door-content button.btn-cards {
-        font-size: 2rem;
-        padding: 1.2rem 3rem;
-        border-radius: 3rem;
-    }
-    .door-content {
-        height: 42rem;
-    }
-    .pt-text {
-        gap: 2rem;
-    }
-    .pt-description {
-        font-size: 2.4rem;
-    }
-    .pt-title {
-        font-size: 4rem;
-    }
-    #about {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1.4rem;
-    }
-    .ab-desc {
-        font-size: 1.15rem;
-        padding-left: 3rem;
-    }
-    
-}
-
-@media ( min-width: 1200px ) {
-    p.proyeccion-content {
-        display: none;
-    }
-    .door-paragraph {
-        display: flex;
-        width: 30%;
-        padding-bottom: 3rem;
-        font-size: 1.2rem;
-        line-height: 1.2;
-        text-align: justify;
-    }
-    .door-content {
-        height: 57rem;
-        flex-direction: column;
-    }
-    .ab-desc {
-        font-size: 1.5rem;
-        padding-left: 3rem;
-        line-height: 1.4;
-    }
 }
