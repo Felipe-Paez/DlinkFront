@@ -36,12 +36,24 @@
     
 } 
 
+.banner2{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    filter:blur(3.5px);
+    
+    
+ } 
+
+
 .nameSection {
     display: flex;
     justify-content: center; 
     flex-direction: column;
     background-color:#f6f4f1;
 }
+
 .nameSection .nombrePortafolio{
     margin-top:20px
 }
@@ -78,14 +90,38 @@
 }
 
 
+.main .nameSection .descriptionPortfolio {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f4f1;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
 
-.banner2{
-    border: 1px solid black;
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
-    filter:blur(3.5px);
-    
-    
- } 
+.main .nameSection .descriptionPortfolio .description{
+    display: flex;
+    justify-content: center;
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main .nameSection .descriptionPortfolio .bodyContainer{
+    display: flex;
+    justify-content: center;
+    font-family: "Raleway";
+    font-size: 16px;
+}
+
+.main .nameSection .descriptionPortfolio .bodyContainer .descriptionBody{
+    display: flex;
+    justify-content: center;
+    font-family: "Raleway";
+    font-size: 16px;
+
+}
+
+
+
 
