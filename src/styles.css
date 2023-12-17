@@ -50,6 +50,7 @@
 
 
 
+
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
@@ -70,6 +71,13 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.dlink {
+    background: url(assets/images/quienes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .login-menu-button {
@@ -183,12 +191,12 @@ a {
       background-position: center!important;
       height: 220px;
       padding: 1rem 2rem;
-      background: #313131;
+      background: #515151;
       border-radius: 10px;
       p {
         font-size: 0.9125rem;
         line-height: 160%;
-        color: #999;
+        color:white;
       }
     }
 }
@@ -196,7 +204,7 @@ a {
 .content {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: ro;
+    flex-direction: row;
 }
 
 @media (max-width: 800px) {
@@ -251,6 +259,8 @@ a {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        height: 22rem;
+        justify-content: center;
     }
 
 }
@@ -437,4 +447,24 @@ button.btn {
     color: transparent!important;
     background-color: white!important;
     
+}
+
+.door-content {
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@media ( min-width: 576px ) {
+    .door-content {
+        height: 27rem;
+    }
+
+}
+
+@media ( min-width: 768px ) {
+    .door-content {
+        height: 27rem;
+    }
 }

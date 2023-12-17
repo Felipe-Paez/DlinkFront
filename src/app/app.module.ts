@@ -16,6 +16,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatListModule} from '@angular/material/list';
 
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -31,6 +32,7 @@ import { ProductsHeaderComponent } from './pages/home/products-header/products-h
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { NewProductComponent } from './dashboard/create-portfolio/create-portfolio.component';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 
 @NgModule({
@@ -65,7 +67,8 @@ import { NewProductComponent } from './dashboard/create-portfolio/create-portfol
     MatBadgeModule, 
     MatSnackBarModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CdkAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
