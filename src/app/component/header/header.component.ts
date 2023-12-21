@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 
 @Component({
   selector: 'app-header',
@@ -10,25 +11,31 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HeaderComponent {
   user!:any
   logged = false;
+  authUser!:any
 
   constructor(
-    public router: Router
+    public router: Router,
+    private localstorageService: LocalstorageService
     ) {
   }
 
   ngOnInit(){
-    const item = localStorage.getItem("user");    
-     this.user=item ? JSON.parse(item) : null;
-    console.log(this.user);
-
-    if (this.user?.email && this.user?.role && this.user?.name && this.user?.lastname && this.user?._id){
+    if(!this.logged){
+    this.user = this.localstorageService.getUser()
+    }
+    if(this.user){
       this.logged = true;
     }
+
+    //if (localstorage?.email && localstorage?.role && localstorage?.name && localstorage?.lastname && localstorage?._id){
+      //this.logged = true;
+    //} 
+
   }
 
   createProfile(){
   
-    if (this.user?.email && this.user?.role && this.user?.name && this.user?.lastname && this.user?._id){
+    if (this.user){
       this.router.navigate( [ 'portfolio', 'create' ] );
     }
     else{
@@ -42,6 +49,8 @@ export class HeaderComponent {
     localStorage.removeItem("token");
     window.location.reload()
   }
+
+
 
 
 }

@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatListModule} from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog'
 
 
 
@@ -34,7 +35,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { NewProductComponent } from './dashboard/create-portfolio/create-portfolio.component';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { ImageComponent } from './component/image/image.component';
-
+import { GallerydialogComponent } from './component/gallerydialog/gallerydialog.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ImageComponent } from './component/image/image.component';
     FooterComponent,
     ProductsHeaderComponent,
     NewProductComponent,
-    ImageComponent
+    ImageComponent,
+    GallerydialogComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import { ImageComponent } from './component/image/image.component';
     MatSnackBarModule,
     HttpClientModule,
     ReactiveFormsModule,
-    CdkAccordionModule
+    CdkAccordionModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

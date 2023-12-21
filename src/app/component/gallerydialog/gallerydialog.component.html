@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Add images to your gallery</h2>
+<mat-dialog-content>
+    <form class="img-form" [formGroup]="galleryForm" (ngSubmit)="upload()" autocomplete="off">
+        <div class="field">
+
+            <input id="url" class="input-field" type="text" formControlName="url" placeholder="Paste Url here" />
+        </div>
+        <mat-dialog-actions>
+            <div class="field">
+                <button mat-button type="submit" [disabled]="this.galleryForm.invalid" mat-dialog-close="true">Submit</button>
+            </div>
+            <button mat-button [mat-dialog-close]="true">Cancel</button>
+        </mat-dialog-actions>

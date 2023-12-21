@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { LocalstorageService } from 'src/app/services/localstorage.service';
 import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 
 @Component({
@@ -20,7 +21,8 @@ export class LoginComponent {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private validationFormsService: ValidateFormsService
+    private validationFormsService: ValidateFormsService,
+    private localstorageService: LocalstorageService
   ) {}
 
   login() {
@@ -28,18 +30,17 @@ export class LoginComponent {
 
     this.authService.login( this.loginForm.value ).subscribe( ( data: boolean ) => {
       console.log( data );
-
       // Valida si no se logra autenticar el usuario
       if( ! data ) {
         this.classMessage = 'message error';
         this.message = 'Error de autenticacion';
       }
-
       // Oculta mensaje del formulario
       setTimeout( () => {
         this.classMessage = '';
         this.message = '';
       }, 2000 );
+
 
     });
 

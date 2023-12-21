@@ -18,6 +18,7 @@ export class GalleryService {
   }
 
   createImage(data: Gallery){
+    console.log(data)
     return this.http.post<ResponseGallery>( "http://localhost:4000/api/gallery/", data);
   }
 }

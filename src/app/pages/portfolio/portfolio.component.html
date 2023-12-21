@@ -18,14 +18,6 @@
         <div class="pricePortafolio">
             <h4 class="price"> Price/hour : ${{portfolio.price}} USD </h4>
         </div>
-<<<<<<< HEAD
-=======
-
-    <div *ngIf="logged">
-        
-    </div>
-
->>>>>>> 4f45a5ff7ca9278b6226c60cfd023772f1508193
 
         <div class="descriptionPortfolio">
 
@@ -38,19 +30,14 @@
         </div>
 
     </div>
-<<<<<<< HEAD
-     
+
     <div class="gallery">
-        <app-image *ngFor="let image of images"  [image]="image"></app-image>
+        <app-image *ngFor="let image of images" [image]="image" class="image" (deleteImg)="delete($event)"></app-image>
+        <div class="img-upload" *ngIf="logged">
+            <mat-icon class="add-btn" (click)="openDialog()">add_circle</mat-icon>
+        </div>
     </div>
 
-    <div *ngIf="logged">
-        <mat-icon style="color: black;font-size: 6rem;max-width: fit-content;max-height: fit-content;height: auto;width: auto;">add_circle</mat-icon>
-    </div>
+
 
 </div>
-=======
-    
-</div>
-
->>>>>>> 4f45a5ff7ca9278b6226c60cfd023772f1508193

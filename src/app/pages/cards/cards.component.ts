@@ -33,7 +33,7 @@ export class CardsComponent {
       }
       if(this.reload == "1")
       {
-        window.location.reload();
+        //window.location.reload();
         localStorage.removeItem("reload")
       }
     } 

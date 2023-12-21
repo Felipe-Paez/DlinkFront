@@ -5,6 +5,7 @@ import { User } from '../interfaces/user';
 import { ResponseAuth } from '../interfaces/response-auth';
 import { catchError, map, of, tap } from 'rxjs';
 import { Router } from '@angular/router';
+import { LocalstorageService } from './localstorage.service';
 
 
 @Injectable({
@@ -16,7 +17,8 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private localstorageService:LocalstorageService
   ) { }
 
   /** Getter */
@@ -50,6 +52,8 @@ export class AuthService {
           console.log(response)
           localStorage.setItem( 'token', response.token! );
           localStorage.setItem( 'user', JSON.stringify(response.userData) );
+          const user =this.localstorageService.getUser()
+          console.log(user)
           this.router.navigate( [ 'cards' ] );
         }),
         map( ( response: ResponseAuth ) => response.ok ),

@@ -8,6 +8,7 @@ const headers = ''
 @Injectable({
   providedIn: 'root'
 })
+
 export class PortfolioService {
   token: string;
   headers: HttpHeaders;

@@ -4,6 +4,8 @@ import { map, tap } from 'rxjs';
 import { Portfolio } from 'src/app/interfaces/portfolio';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { GalleryService } from 'src/app/services/gallery.service';
+import { MatDialog } from '@angular/material/dialog';
+import { GallerydialogComponent } from 'src/app/component/gallerydialog/gallerydialog.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -18,6 +20,7 @@ export class PortfolioComponent {
   user!:any
 
   constructor(
+    private dialog: MatDialog,
     private portfolioService:PortfolioService,
     private activatedRoute:ActivatedRoute,
     private galleryService:GalleryService
@@ -30,7 +33,6 @@ export class PortfolioComponent {
 
     const item = localStorage.getItem("user");    
     this.user=item ? JSON.parse(item) : null;
-
     this.activatedRoute.params
     .pipe(
       tap( response => {
@@ -43,11 +45,8 @@ export class PortfolioComponent {
       console.log( name );
 
       this.portfolioName = name
-
-      this.galleryService.getAllImagesByName(name).subscribe((data) => {
-        console.log(data)
-        this.images = data.data
-     })
+ 
+       this.loadGallery(name)
 
       this.portfolioService.getPortfolioByName(name).subscribe((data: any) => {
         console.log(data)
@@ -64,7 +63,33 @@ export class PortfolioComponent {
   }
 
 
-  
+  loadGallery(name:string){
+      this.galleryService.getAllImagesByName(name).subscribe((data) => {
+        console.log(data)
+        this.images = data.data
+     })
+
+  }
+
+   openDialog(): void {
+    const dialogRef = this.dialog.open(GallerydialogComponent, {
+      width: "310px",
+      height: "180px"
+    })
+
+    dialogRef.afterClosed().subscribe((result) => {
+      this.loadGallery(this.portfolioName)
+      console.log("The dialog was closed");
+    })
+   }
+   delete(id:string) {
+    console.log(id)
+    this.galleryService.deleteImageById(id).subscribe( ( response ) => {
+    console.log( response );
+    this.loadGallery(this.portfolioName)
+    });
+
+  } 
   
 
 }

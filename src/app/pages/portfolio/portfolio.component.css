@@ -1,127 +1,148 @@
-.main{
-    background-color: #a9a9a9;
-    height: 100%;
+.main {
+  background-color: #a9a9a9;
 }
-.pfp{
-    position: absolute;
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    margin-top: 260px;
-    margin-right: 60%; 
-    z-index: 1;
-}
-
-@media (min-width: 568px ) {
-    .pfp {
-        /* margin-right: 50%; */
-    }
-}
- 
-.profile{
-    display: flex;
-    justify-content: center;
-    height: 19rem;
+.pfp {
+  position: absolute;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-top: 260px;
+  margin-right: 60%;
+  z-index: 1;
 }
 
- .banner{
-    position: absolute;
-    width: 75%;
-    height: 18rem;
-    border-radius: 10px;
-    margin-top: 9px;
-    object-fit: cover;
-    z-index: 1;
+/*@media (min-width: 568px) {
+  .pfp {
+     margin-right: 50%; 
+  }
+}*/
 
-    
-} 
+.profile {
+  display: flex;
+  justify-content: center;
+  height: 19rem;
+}
 
-.banner2{
-    border: 1px solid black;
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
-    filter:blur(3.5px);
-    
-    
- } 
+.banner {
+  position: absolute;
+  width: 75%;
+  height: 18rem;
+  border-radius: 10px;
+  margin-top: 9px;
+  object-fit: cover;
+  z-index: 1;
+}
 
+.banner2 {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3.5px);
+}
 
 .nameSection {
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
-    background-color:#f6f4f1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f6f4f1;
 }
 
-.nameSection .nombrePortafolio{
-    margin-top:20px
+.nameSection .nombrePortafolio {
+  margin-top: 20px;
 }
-.nameSection .nombrePortafolio .name{
-    font-family: "Raleway";
-    text-align: left;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-left: 28%;
-}
-
-
-.nameSection .stylePortafolio .style{
-    font-family: "Raleway";
-    text-align: left;
-    font-size: 20px;
-    margin-left: 28%;
+.nameSection .nombrePortafolio .name {
+  font-family: "Raleway";
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 28%;
 }
 
+.nameSection .stylePortafolio .style {
+  font-family: "Raleway";
+  text-align: left;
+  font-size: 20px;
+  margin-left: 28%;
+}
 
 .nameSection .pricePortafolio {
-    position: absolute;
-    text-align: right;
-    margin-left: 70%;
-
+  position: absolute;
+  text-align: right;
+  margin-left: 70%;
 }
 
-.nameSection .pricePortafolio .price{
-    font-family: "Raleway";
-    text-align: center;
-    width:180px;
-
-
+.nameSection .pricePortafolio .price {
+  font-family: "Raleway";
+  text-align: center;
+  width: 180px;
 }
-
 
 .main .nameSection .descriptionPortfolio {
-    display: flex;
-    flex-direction: column;
-    background-color: #f6f4f1;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f4f1;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
-.main .nameSection .descriptionPortfolio .description{
-    display: flex;
-    justify-content: center;
-    font-family: "Raleway";
-    font-size: 20px;
-    font-weight: bold;
+.main .nameSection .descriptionPortfolio .description {
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.main .nameSection .descriptionPortfolio .bodyContainer{
-    display: flex;
-    justify-content: center;
-    font-family: "Raleway";
-    font-size: 16px;
+.main .nameSection .descriptionPortfolio .bodyContainer {
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway";
+  font-size: 16px;
 }
 
-.main .nameSection .descriptionPortfolio .bodyContainer .descriptionBody{
-    display: flex;
-    justify-content: center;
-    font-family: "Raleway";
-    font-size: 16px;
-
+.main .nameSection .descriptionPortfolio .bodyContainer .descriptionBody {
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway";
+  font-size: 16px;
 }
 
+.gallery {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
+.img-upload {
+  height: 30%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.submit-img {
+  position: absolute;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+  background-color: blue;
+}
 
+.add-btn {
+  color: black;
+  font-size: 6rem;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+.image{
+  width: 30%;
+  height: 30%;
+  margin: 10px 1.5%;
+}
