@@ -1,17 +1,17 @@
-<mat-drawer-container 
-[autosize]="true"
-class="min-h-full max-w-7x1 mx-auto border-x" style="background-color: #a9a9a9;">
-
-    <mat-drawer mode="side" opened class="p-6" style="background-color: #a9a9a9; border: none;">
-        <app-filter (showCategory)="onShowCategory($event)"></app-filter>
-    </mat-drawer >
-    <mat-drawer-content class="p-6" >
-        <app-products-header></app-products-header>
-        {{style}}
+<div style="background-color: #a9a9a9;display: flex;flex-direction: row;justify-content: space-between;">
+    <div style="background-color: #a9a9a9; border: none;width: 240px;margin-top: 30px;margin-left: 30px;">
+        <app-filters (showCategory)="onShowCategory($event)"></app-filters>
+    </div>
         <div class="content">
-            <app-card *ngFor="let portfolio of portfolios"  [portfolio]="portfolio"></app-card>
+            <mat-card class="flip" *ngFor="let portfolio of portfolios">
+                <div class="front" style="background-image: url({{portfolio.urlbanner}});"></div>
+                <div class="back">
+                    <h2>{{portfolio.name}}</h2>
+                    <img class="pfpCard" src="{{portfolio.urlpfp}}" alt="ProfileCard">
+                    <p>{{portfolio.style}} / {{portfolio.price}} USD</p>
+                    <button class="card-button" routerLink="/portfolio/{{portfolio.name}}">Ver Perfil</button>
+
+                </div>
+            </mat-card>
+        </div>
 </div>
-    </mat-drawer-content>
-
-
-</mat-drawer-container>

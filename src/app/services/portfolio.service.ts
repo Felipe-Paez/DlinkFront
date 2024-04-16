@@ -20,15 +20,15 @@ export class PortfolioService {
    }
   
   getAllPortfolios(){
-    return this.http.get<ResponsePortfolio>("http://localhost:4000/api/portfolio/")
+    return this.http.get<ResponsePortfolio>("http://ec2-54-234-47-77.compute-1.amazonaws.com/api/portfolio")
   }
   getPortfolioByName(name:string){
-    return this.http.get<ResponsePortfolio>("http://localhost:4000/api/portfolio/"+name)
+    return this.http.get<ResponsePortfolio>("http://ec2-54-234-47-77.compute-1.amazonaws.com/api/portfolio/profile/"+name)
   }
 
   createPortfolio(data: Portfolio){
     return this.http.post<ResponsePortfolio>( 
-      "http://localhost:4000/api/portfolio/", 
+      "http://ec2-54-234-47-77.compute-1.amazonaws.com/api/portfolio", 
       data, 
       { headers: this.headers } 
     );

@@ -10,7 +10,7 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
   styleUrls: ['./create-portfolio.component.css']
 })
 export class NewProductComponent {
-  categories = [
+  styles = [
     { name: 'Industrial', value: 'Industrial' },
     { name: 'Minimalist', value: 'Minimalist' },
     { name: 'Wabi-Sabi', value: 'Wabi-Sabi' },
@@ -53,7 +53,7 @@ export class NewProductComponent {
     this.portfolioForm.reset();
 
     setTimeout( () => {
-      this.router.navigate( [ 'cards' ] );
+      //this.router.navigate( [ 'cards' ] );
     }, 1000 );
   }
 }

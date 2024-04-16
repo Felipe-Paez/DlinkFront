@@ -31,10 +31,12 @@
 
     </div>
 
+
+
     <div class="gallery">
         <app-image *ngFor="let image of images" [image]="image" class="image" (deleteImg)="delete($event)"></app-image>
         <div class="img-upload" *ngIf="logged">
-            <mat-icon class="add-btn" (click)="openDialog()">add_circle</mat-icon>
+            <mat-icon style="overflow: none;" class="add-btn" (click)="openDialog()">add_circle</mat-icon>
         </div>
     </div>
 

@@ -1,10 +1,12 @@
-<mat-expansion-panel *ngIf="styles" style="box-shadow: none; background-color: #a9a9a9;">
-<mat-expansion-panel-header >
-    <mat-panel-title >STYLES</mat-panel-title>
-</mat-expansion-panel-header>
-<mat-selection-list [multiple]="false">
-    <mat-list-option *ngFor="let style of styles" [value]="style">
-        <button style="border: none; background-color: #a9a9a9; font-size: larger;">{{style}}</button>
-    </mat-list-option>
-</mat-selection-list>
+<mat-expansion-panel *ngIf="categories" style="box-shadow: none; background-color: #a9a9a9;max-width: none;width: auto;">
+    <mat-expansion-panel-header>
+        <mat-panel-title> CATEGORIES </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div style="width: 180px;">
+        <div style="display: flex;flex-direction: column;">
+            <button style="-webkit-box-shadow: 2px 3px 10px -3px rgba(0,0,0,0.62); -moz-box-shadow: 2px 3px 10px -3px rgba(0,0,0,0.62);box-shadow: 2px 3px 10px -3px rgba(0,0,0,0.62);border: none; width: 180px; height: 50px; background-color: #a9a9a9; font-size: larger;margin-bottom: 20px;" (click)="onShowAll()">See All</button>
+            <button style= "-webkit-box-shadow: 2px 3px 10px -3px rgba(0,0,0,0.62); -moz-box-shadow: 2px 3px 10px -3px rgba(0,0,0,0.62);box-shadow: 2px 3px 10px -3px rgba(0,0,0,0.62);border: none; width: 180px; height: 50px; background-color: #a9a9a9; font-size: larger;margin-bottom: 20px;" *ngFor="let category of categories" [value]="category" (click)="onShowCategory(category)">{{ category }}</button>
+        </div>
+    </div>
+
 </mat-expansion-panel>

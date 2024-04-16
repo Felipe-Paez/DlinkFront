@@ -25,18 +25,16 @@ import { CardsComponent } from './pages/cards/cards.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HeaderComponent } from './component/header/header.component';
-import { CardComponent } from './component/card/card.component';
 import { FilterComponent } from './pages/home/filter/filter.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductsHeaderComponent } from './pages/home/products-header/products-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { NewProductComponent } from './dashboard/create-portfolio/create-portfolio.component';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { ImageComponent } from './component/image/image.component';
 import { GallerydialogComponent } from './component/gallerydialog/gallerydialog.component';
-
+import { SocialsdialogComponent } from './component/socialsdialog/socialsdialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,13 +44,12 @@ import { GallerydialogComponent } from './component/gallerydialog/gallerydialog.
     CardsComponent,
     PortfolioComponent,
     HeaderComponent,
-    CardComponent,
     FilterComponent,
     FooterComponent,
-    ProductsHeaderComponent,
     NewProductComponent,
     ImageComponent,
-    GallerydialogComponent
+    GallerydialogComponent,
+    SocialsdialogComponent
   ],
   imports: [
     BrowserModule,

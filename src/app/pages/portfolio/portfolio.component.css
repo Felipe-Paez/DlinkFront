@@ -136,9 +136,11 @@
 .add-btn {
   color: black;
   font-size: 6rem;
-  width: 50%;
-  height: 50%;
+  width: 25%;
+  height: 200px;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .image{

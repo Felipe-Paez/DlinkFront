@@ -6,6 +6,8 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 import { GalleryService } from 'src/app/services/gallery.service';
 import { MatDialog } from '@angular/material/dialog';
 import { GallerydialogComponent } from 'src/app/component/gallerydialog/gallerydialog.component';
+import { SocialsdialogComponent } from 'src/app/component/socialsdialog/socialsdialog.component';
+import { SocialsService } from 'src/app/services/socials.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -18,12 +20,14 @@ export class PortfolioComponent {
   portfolioName!: string;
   logged = false;
   user!:any
+  socials:any;
 
   constructor(
     private dialog: MatDialog,
     private portfolioService:PortfolioService,
     private activatedRoute:ActivatedRoute,
-    private galleryService:GalleryService
+    private galleryService:GalleryService,
+    private socialsService:SocialsService
     ){}
 
 
@@ -71,6 +75,27 @@ export class PortfolioComponent {
 
   }
 
+  loadSocials(name:string){
+    this.socialsService.getAllSocialsByName(name).subscribe((data) => {
+      console.log(data)
+      this.socials = data.data
+   })
+
+}
+  openSocialDialog(): void {
+    const dialogRef = this.dialog.open(SocialsdialogComponent, {
+      width: "310px",
+      height: "180px"
+    })
+
+    dialogRef.afterClosed().subscribe((result) => {
+      this.loadGallery(this.portfolioName)
+      console.log("The dialog was closed");
+    })
+   }
+   
+
+
    openDialog(): void {
     const dialogRef = this.dialog.open(GallerydialogComponent, {
       width: "310px",
@@ -82,6 +107,7 @@ export class PortfolioComponent {
       console.log("The dialog was closed");
     })
    }
+
    delete(id:string) {
     console.log(id)
     this.galleryService.deleteImageById(id).subscribe( ( response ) => {

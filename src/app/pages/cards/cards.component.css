@@ -1,4 +1,15 @@
 .content{
     background-color: #a9a9a9;
     padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 1215px;
+}
+
+.pfpCard {
+
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
 }

@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Add images to your gallery</h2>
+<mat-dialog-content>
+    <form class="img-form" [formGroup]="socialsForm" (ngSubmit)="upload()" autocomplete="off">
+        <div class="field">
+
+            <input id="url" class="input-field" type="text" formControlName="url" placeholder="Paste Url here" />
+        </div>
+        <div class="field">
+        <label for="social" class="label">Social Media  </label>
+        <select id="social" class="input-field" formControlName="social">
+            <option value="" selected>Select...</option>
+            <option *ngFor="let style of styles" [value]="style.value">{{ style.name }}</option>
+        </select>
+        </div>
+        <mat-dialog-actions>
+            <div class="field">
+                <button mat-button type="submit" [disabled]="this.socialsForm.invalid"
+                    mat-dialog-close="true">Submit</button>
+            </div>
+            <button mat-button [mat-dialog-close]="true">Cancel</button>
+        </mat-dialog-actions>

@@ -98,17 +98,17 @@
 
 
   <div class="field">
-    <label for="category" class="label">Style</label>
+    <label for="style" class="label">Style</label>
     <select
-      id="category"
+      id="style"
       class="input-field"
       formControlName="style"
     >
       <option value="" selected>Select...</option>
       <option
-        *ngFor="let category of categories"
-        [value]="category.value"
-      >{{ category.name }}</option>
+        *ngFor="let style of styles"
+        [value]="style.value"
+      >{{ style.name }}</option>
     </select>
   </div>
 

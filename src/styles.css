@@ -181,7 +181,7 @@ a {
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: 300px;
+    width: 375px;
     >.front,
     >.back {
       display: block;
@@ -305,11 +305,10 @@ footer#footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 60px auto;
+    margin: 70px auto 60px;
     color: white;
     background-color: rgba(34,34,34, .8);
     border-radius: 20px;
-    margin-top: 150px;
 }
 
 
@@ -438,22 +437,3 @@ button.btn {
     
 }
 
-.door-content {
-    height: 25rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-@media ( min-width: 576px ) {
-    .door-content {
-        height: 27rem;
-    }
-
-}
-
-@media ( min-width: 768px ) {
-    .door-content {
-        height: 27rem;
-    }
-}
