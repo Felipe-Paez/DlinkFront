@@ -72,10 +72,13 @@ export class RegisterComponent {
 
 
       // Valida si la peticion fue exitosa y despliega 
-      if( data.ok )
+      if( data.ok ) {
         this.classMessage = 'message success';
-      else
+        this.router.navigate( [ 'login' ] );
+      }
+      else{
         this.classMessage = 'message error'
+      }
 
       // Oculta mensaje del formulario
       setTimeout( () => {
@@ -88,7 +91,5 @@ export class RegisterComponent {
     });
 
     this.registerForm.reset();
-
-    this.router.navigate( [ 'login' ] );
   }
 }
