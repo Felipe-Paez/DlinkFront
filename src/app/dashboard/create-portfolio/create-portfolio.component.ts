@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Portfolio } from 'src/app/interfaces/portfolio';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 
@@ -10,6 +11,14 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
   styleUrls: ['./create-portfolio.component.css']
 })
 export class NewProductComponent {
+   user:any;
+   portfolioInfo!:Portfolio;
+
+  ngOnInit():void{
+    const item = localStorage.getItem("user");    
+    this.user=item ? JSON.parse(item) : null;
+  }
+
   styles = [
     { name: 'Industrial', value: 'Industrial' },
     { name: 'Minimalist', value: 'Minimalist' },
@@ -25,7 +34,6 @@ export class NewProductComponent {
 
   ];
   portfolioForm: FormGroup = this.formBuilder.group({
-    name: [ '', [ Validators.required, Validators.minLength( 3 ) ] ],
     price: [ '', [ Validators.required, this.validateForm.validatePrice ] ],
     // quantity: [ '', [ Validators.required, this.validateForm.validateQuantity ] ],
     urlpfp: [ '', this.validateForm.validateNormalUrl ],
@@ -43,9 +51,13 @@ export class NewProductComponent {
 
 
   createPortfolio() {
-    console.log( this.portfolioForm.value );
+    console.log( this.portfolioForm.value ); 
 
-    this.portfolioService.createPortfolio( this.portfolioForm.value )
+    this.portfolioInfo = this.portfolioForm.value
+    
+    this.portfolioInfo.name = this.user.name
+    
+    this.portfolioService.createPortfolio( this.portfolioInfo )
       .subscribe( ( response ) => {
         console.log( response );
       });
@@ -53,7 +65,7 @@ export class NewProductComponent {
     this.portfolioForm.reset();
 
     setTimeout( () => {
-      //this.router.navigate( [ 'cards' ] );
+      this.router.navigate( [ 'cards' ] );
     }, 1000 );
   }
 }

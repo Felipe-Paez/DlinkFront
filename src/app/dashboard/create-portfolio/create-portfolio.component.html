@@ -10,31 +10,6 @@
   </div>
   
   <div class="field">
-    <label class="label" for="name">Name*</label>
-    <input
-      id="name"
-      class="input-field"
-      type="text"
-      formControlName="name"
-      placeholder="Portfolio's name"
-      minlength="3"
-    />
-    <div
-      *ngIf="portfolioForm.get( 'name' )?.invalid && ( portfolioForm.get( 'name' )?.dirty || portfolioForm.get( 'name' )?.touched )"
-      class="error-message"
-    >
-      <small *ngIf="portfolioForm.get( 'name' )?.errors?.[ 'required' ]">
-        Portfolio's name is required.
-      </small>
-      <small *ngIf="portfolioForm.get( 'name' )?.errors?.[ 'minlength' ]">
-        At least three caracthers.
-      </small>
-    </div>
-  </div>
-
-
-
-  <div class="field">
     <label for="price" class="label">Price*</label>
     <input
       id="price"
@@ -61,7 +36,7 @@
 
 
   <div class="field">
-    <label for="image" class="label">Portfolio's Profile</label>
+    <label for="image" class="label">Portfolio's Profile Photo</label>
     <input
       id="image"
       class="input-field"
@@ -79,7 +54,7 @@
   </div>
 
   <div class="field">
-    <label for="image" class="label">Portfolio's background</label>
+    <label for="image" class="label">Portfolio's Banner Image</label>
     <input
       id="image"
       class="input-field"
