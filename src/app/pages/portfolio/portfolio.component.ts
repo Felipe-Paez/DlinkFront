@@ -50,7 +50,7 @@ export class PortfolioComponent {
 
       this.portfolioName = name
  
-       this.loadGallery(name)
+       this.loadGallery(this.user.name)
 
       this.portfolioService.getPortfolioByName(name).subscribe((data: any) => {
         console.log(data)
