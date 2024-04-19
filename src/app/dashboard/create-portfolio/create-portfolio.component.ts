@@ -55,7 +55,7 @@ export class NewProductComponent {
 
     this.portfolioInfo = this.portfolioForm.value
     
-    this.portfolioInfo.name = this.user.name
+    this.portfolioInfo.name = this.user.username
     
     this.portfolioService.createPortfolio( this.portfolioInfo )
       .subscribe( ( response ) => {
@@ -65,7 +65,7 @@ export class NewProductComponent {
     this.portfolioForm.reset();
 
     setTimeout( () => {
-      this.router.navigate( [ 'cards' ] );
+      this.router.navigate( [ 'portfolio', this.user.username ] );
     }, 1000 );
   }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AuthService } from 'src/app/services/auth.service';
 import { ValidateFormsService } from 'src/app/services/validate-forms.service';
@@ -57,7 +58,8 @@ export class RegisterComponent {
   constructor( 
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private validationFormsService: ValidateFormsService
+    private validationFormsService: ValidateFormsService,
+    private router: Router 
   ) {}
 
   // Paso 4 (Reactive Forms): Obtener datos del formulario
@@ -86,5 +88,7 @@ export class RegisterComponent {
     });
 
     this.registerForm.reset();
+
+    this.router.navigate( [ 'login' ] );
   }
 }
