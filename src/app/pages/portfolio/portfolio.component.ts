@@ -60,7 +60,7 @@ export class PortfolioComponent {
       
     })
 
-    if( this.portfolioName == this.user.name)
+    if( this.portfolioName == this.user.username)
   {
     this.logged = true
   }

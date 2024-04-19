@@ -14,7 +14,7 @@
 
     <mat-menu #menu="matMenu">
         <ng-container *ngIf="logged; else login">
-            <a mat-menu-item routerLink="/portfolio/{{user.name}}">My Portfolio</a>
+            <a mat-menu-item routerLink="/portfolio/{{user.username}}">My Portfolio</a>
             <a mat-menu-item  (click)="logout()">Logout</a>
         </ng-container>
         <ng-template #login> 
