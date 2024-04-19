@@ -45,7 +45,6 @@ export class GallerydialogComponent {
     delete data.email
     delete data.role
     console.log(data)
-    this.portfolio.loadGallery(this.user.name!)
     this.galleryService.createImage(data).subscribe( ( response ) => {
       console.log( response );
     });
