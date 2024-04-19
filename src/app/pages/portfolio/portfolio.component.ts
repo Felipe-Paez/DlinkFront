@@ -89,7 +89,7 @@ export class PortfolioComponent {
     })
 
     dialogRef.afterClosed().subscribe((result) => {
-      this.loadGallery(this.portfolioName)
+      this.loadGallery(this.user.name)
       console.log("The dialog was closed");
     })
    }
@@ -103,7 +103,7 @@ export class PortfolioComponent {
     })
 
     dialogRef.afterClosed().subscribe((result) => {
-      this.loadGallery(this.portfolioName)
+      this.loadGallery(this.user.name)
       console.log("The dialog was closed");
     })
    }
@@ -112,7 +112,7 @@ export class PortfolioComponent {
     console.log(id)
     this.galleryService.deleteImageById(id).subscribe( ( response ) => {
     console.log( response );
-    this.loadGallery(this.portfolioName)
+    this.loadGallery(this.user.name)
     });
 
   } 
