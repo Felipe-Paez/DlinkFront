@@ -43,7 +43,7 @@ export class ImageComponent {
         this.portfolioName = name
 
       })
-      if( this.portfolioName == this.user.name)
+      if( this.portfolioName == this.user.username)
       {
         this.logged = true
       }
