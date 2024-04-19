@@ -5,7 +5,6 @@ import { map, tap } from 'rxjs';
 import { GalleryService } from 'src/app/services/gallery.service';
 import { Gallery } from 'src/app/interfaces/gallery';
 import { User } from 'src/app/interfaces/user';
-import { PortfolioComponent } from 'src/app/pages/portfolio/portfolio.component';
 
 @Component({
   selector: 'app-gallerydialog',
@@ -24,8 +23,7 @@ export class GallerydialogComponent {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private galleryService: GalleryService,
-    private portfolio:PortfolioComponent
+    private galleryService: GalleryService
   ) {}
 
   ngOnInit(): void {
